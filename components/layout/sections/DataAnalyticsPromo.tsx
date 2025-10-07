@@ -1,0 +1,99 @@
+'use client'
+
+import { useState } from 'react'
+import { Play } from 'lucide-react'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+
+export default function DataAnalyticsPromo() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+
+  return (
+    <main className="min-h-screen bg-gray-50 relative overflow-hidden">
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] [background-size:32px_32px]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left lg:w-1/2 space-y-8">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900">Data Analytics</h1>
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-700">
+            Master the Art of Data-Driven Decisions!
+          </h2>
+
+          <div className="flex flex-col gap-4">
+            <p className="text-lg text-gray-700">
+              Learn to clean, visualize, and analyze data using Excel, SQL, Power BI, and Python.
+            </p>
+            <p className="text-lg text-gray-700">
+              Hands-on projects, dashboards, and real business cases included.
+            </p>
+            <div className="flex justify-center lg:justify-start items-center gap-2 text-xl">
+              <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+              <span className="text-gray-600">Rated 4.9/5 by 10,000+ learners</span>
+            </div>
+            <p className="text-md text-gray-700">
+              Industry-ready curriculum + Certification + Career Assistance.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center sm:items-start">
+            <Button
+              asChild
+              className="w-5/6 sm:w-1/3 font-bold group/arrow bg-black hover:bg-gray-800 text-white rounded-full px-24 py-3 transition duration-300"
+            >
+              <Link href="https://wa.me/919606995925?text=Hi%2C%20I'm%20interested%20in%20your%20Data%20Analytics%20course.">
+                Start Learning at ₹4999
+                <Play className="size-4 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              className="w-5/6 sm:w-1/3 font-bold border-2 border-black text-black hover:bg-gray-50 rounded-full px-8 py-3 transition duration-300"
+            >
+              <Link href="tel:+919606995925">Call Us</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* 📹 Video Section */}
+        <div className="relative w-full lg:w-1/2">
+          <div
+            onClick={() => setIsVideoOpen(true)}
+            className="cursor-pointer relative w-full aspect-[16/9] bg-gray-200 rounded-lg overflow-hidden"
+          >
+            <img
+              src="/html.jpeg"
+              alt="Data Analytics Demo"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 p-3 rounded-full">
+              <Play className="w-6 h-6 text-white" />
+            </div>
+          </div>
+
+          {isVideoOpen && (
+            <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4">
+              <div className="relative w-full max-w-3xl aspect-[16/9]">
+                <video
+                  className="absolute top-0 left-0 w-full h-full rounded-lg"
+                  controls
+                  autoPlay
+                >
+                  <source src="/html.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <button
+                  className="absolute top-2 right-2 text-white text-xl"
+                  onClick={() => setIsVideoOpen(false)}
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </main>
+  )
+}
