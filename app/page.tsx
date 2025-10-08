@@ -25,6 +25,8 @@ import { CardHoverEffectDemo } from "@/components/layout/sections/CardHoverEffec
 import JobReady from "@/components/layout/sections/JobReady";
 import Journey from "@/components/layout/sections/Journey";
 import WhyJoinGeoNixa from "@/components/layout/sections/WhyJoinGeoNixa";
+import ProgrammingGlobeSection from "@/components/layout/sections/ProgrammingGlobeSection";
+import { CourseOfferings } from "@/components/layout/sections/DataEntryServices";
 export const metadata = {
   title: "GeoNixa | Online Learning Platform for Skill Development",
   description:
@@ -66,13 +68,14 @@ export default function Home() {
                 </Container>
                 <Programs/>
                 <VerticalsSection/>
-                <BrainBattleChampionship/>
-                <JobReady/>
+               <ProgrammingGlobeSection/>
+               
                
             
                 {/* <ExplorePrograms/> */}
                 {/* <FeaturesSectionDemo/> */}
                 <BrainBattleWinners/>
+                <CourseOfferings/>
              
              <WhyJoinGeoNixa/>
 
