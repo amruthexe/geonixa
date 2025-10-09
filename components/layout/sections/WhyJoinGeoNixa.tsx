@@ -36,8 +36,8 @@ export default function WhyJoinGeoNixa() {
     <section className="py-16 bg-white relative overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-pink-500 mb-3">
-          Why join <span className="text-[#ff4a4a]">GeoNixa?</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#eb4917]  mb-3">
+          Why join <span className="text-[#eb4917] ">GeoNixa?</span>
         </h2>
 
         {/* Google Reviews */}
@@ -80,7 +80,7 @@ export default function WhyJoinGeoNixa() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4">
-                  <h3 className="text-lg font-semibold text-pink-400">
+                  <h3 className="text-lg font-semibold text-[#eb4917] ">
                     {item.title}
                   </h3>
                   <p className="text-sm text-white/90">{item.desc}</p>

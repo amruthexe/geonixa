@@ -6,7 +6,7 @@ import Companies from "@/components/layout/sections/Companies";
 import { ContactSection } from "@/components/layout/sections/contact";
 import CTA from "@/components/layout/sections/cta";
 import { FAQSection } from "@/components/layout/sections/faq";
-import { FeaturesSection } from "@/components/layout/sections/features";
+import {  NextGenEdTechFeatures } from "@/components/layout/sections/features";
 import { HeroSection } from "@/components/layout/sections/hero";
 import  Container from "@/components/global/container";
 import { Programs } from "@/components/layout/sections/Programs";
@@ -27,6 +27,8 @@ import Journey from "@/components/layout/sections/Journey";
 import WhyJoinGeoNixa from "@/components/layout/sections/WhyJoinGeoNixa";
 import ProgrammingGlobeSection from "@/components/layout/sections/ProgrammingGlobeSection";
 import { CourseOfferings } from "@/components/layout/sections/DataEntryServices";
+import UpskillSection from "@/components/layout/sections/UpskillSection";
+import TeamPlatformSection from "@/components/layout/sections/TeamPlatformSection";
 export const metadata = {
   title: "GeoNixa | Online Learning Platform for Skill Development",
   description:
@@ -62,7 +64,8 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <HeroSection />
+    <UpskillSection/>
+      {/* <HeroSection /> */}
       <Container >
                     <Companies />
                 </Container>
@@ -71,19 +74,21 @@ export default function Home() {
                <ProgrammingGlobeSection/>
                
                
+               
             
                 {/* <ExplorePrograms/> */}
                 {/* <FeaturesSectionDemo/> */}
                 <BrainBattleWinners/>
-                <CourseOfferings/>
+                {/* <CourseOfferings/> */}
              
              <WhyJoinGeoNixa/>
+             <TeamPlatformSection/>
 
             
 
               
  
-      <FeaturesSection />
+      <NextGenEdTechFeatures />
       <CommunityStats/>
      
      
@@ -101,7 +106,7 @@ export default function Home() {
      
       {/* <CommunitySection /> */}
       <BenefitsSection />
-      <VisitCenterSection/>
+     
 
     
       <Footer/>

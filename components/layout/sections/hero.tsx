@@ -27,7 +27,7 @@ export const HeroSection = () => {
                 </div>
                 <span className="inline-flex items-center justify-center gap-2 animate-text-gradient animate-background-shine bg-black bg-[200%_auto] bg-clip-text text-sm text-transparent">
                   India’s Fastest Growing 
-                  <span className="text-xs text-[#eb4917] px-1.5 py-0.5 rounded-full bg-black text-white flex items-center justify-center">
+                  <span className="text-xs text-[#eb4917] px-1.5 py-0.5 rounded-full bg-black flex items-center justify-center">
                     Explore Now
                     <ArrowRightIcon className="w-3.5 h-3.5 ml-1 text-white" />
                   </span>

@@ -64,6 +64,19 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com", // Added images.unsplash.com here
       },
+       {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+       {
+        protocol: "https",
+        hostname: "img.icons8.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+       
+      }
     ],
   },
 };

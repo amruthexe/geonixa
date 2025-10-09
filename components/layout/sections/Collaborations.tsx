@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import Image from "next/image";
 
 const collaborations = [
   {
@@ -9,10 +10,7 @@ const collaborations = [
     name: "AWS Partner",
     logo: "https://img.icons8.com/color/512/amazon-web-services.png",
   },
-  {
-    name: "AICTE",
-    logo: "https://upload.wikimedia.org/wikipedia/en/e/eb/All_India_Council_for_Technical_Education_logo.png",
-  },
+ 
   {
     name: "MSME",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/MSME_logo_%28colour%29.svg/640px-MSME_logo_%28colour%29.svg.png",
@@ -31,25 +29,50 @@ const collaborations = [
   },
 ];
 
-const Collaborations: React.FC = () => {
+export default function Collaborations() {
   return (
-    <section className="bg-white text-black py-6 px-4">
-      <h2 className="text-3xl font-bold mb-16 text-center">Collaborations</h2>
-      <div className="flex flex-wrap justify-center items-center gap-8 overflow-x-auto px-2">
-        {collaborations.map((item, index) => (
-          <div key={index} className="flex flex-col items-center text-center min-w-[120px]">
-            <img
-              src={item.logo}
-              alt={item.name}
-              className="w-28 h-16 object-contain mb-2"
-              loading="lazy"
-            />
-            <p className="text-sm font-medium   whitespace-nowrap">{item.name}</p>
+    <section className="bg-white py-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-8">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+          {/* Text Section */}
+          <div className="max-w-xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+              Trusted by India’s leading organizations
+            </h2>
+            <p className="text-gray-600 mt-5 text-lg leading-relaxed">
+              GeoNixa collaborates with global and national leaders to bring innovation in education and technology. 
+              Together, we’re building smarter learning ecosystems that empower institutions and students.
+            </p>
+            <div className="mt-8">
+              <a
+                href="https://wa.me/919392855968"
+                target="_blank"
+                className="inline-block bg-black text-white text-lg font-semibold px-8 py-3 rounded-full shadow hover:bg-gray-800 transition-all duration-200"
+              >
+                Talk to us 
+              </a>
+            </div>
           </div>
-        ))}
+
+          {/* Logos Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-10 place-items-center">
+            {collaborations.map((partner) => (
+              <div
+                key={partner.name}
+                className="bg-white rounded-xl shadow-sm  flex items-center justify-center w-40 h-24 hover:shadow-md transition-all duration-200"
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={120}
+                  height={80}
+                  className="object-contain max-h-16"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
-};
-
-export default Collaborations;
+}

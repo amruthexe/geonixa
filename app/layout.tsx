@@ -34,7 +34,7 @@ export default function RootLayout({
 
 
    <div className="pt-4  "> 
-   <div className="absolute inset-0 z-100 bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] [background-size:32px_32px]" /> 
+  
     <Navbar />
 
     </div>
