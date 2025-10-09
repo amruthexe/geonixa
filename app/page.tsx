@@ -29,13 +29,16 @@ import ProgrammingGlobeSection from "@/components/layout/sections/ProgrammingGlo
 import { CourseOfferings } from "@/components/layout/sections/DataEntryServices";
 import UpskillSection from "@/components/layout/sections/UpskillSection";
 import TeamPlatformSection from "@/components/layout/sections/TeamPlatformSection";
+import SuccessStories from "@/components/layout/sections/SuccessStories";
+import GeonixaBottom from "@/components/layout/sections/GeonixaBottom";
+import { CommunitySection } from "@/components/layout/sections/community";
 export const metadata = {
   title: "GeoNixa | Online Learning Platform for Skill Development",
   description:
     "GeoNixa is an edtech startup offering affordable, industry-relevant online courses in web development, coding, and job-ready skills. Learn anywhere, anytime with GeoNixa E-Learning.",
   openGraph: {
     type: "website",
-    url: "https://www.talenttrekelearning.info/", // Update to your actual domain
+    url: "https://www.geonixa.com", // Update to your actual domain
     title: "GeoNixa | E-Learning Platform for Future Skills",
     description:
       "Join GeoNixa E-Learning – a modern education startup helping students and professionals master web development, coding, and career-boosting skills.",
@@ -77,11 +80,11 @@ export default function Home() {
                
             
                 {/* <ExplorePrograms/> */}
-                {/* <FeaturesSectionDemo/> */}
-                <BrainBattleWinners/>
+                <FeaturesSectionDemo/>
+                {/* <BrainBattleWinners/> */}
                 {/* <CourseOfferings/> */}
-             
-             <WhyJoinGeoNixa/>
+             <SuccessStories/>
+             {/* <WhyJoinGeoNixa/> */}
              <TeamPlatformSection/>
 
             
@@ -104,12 +107,13 @@ export default function Home() {
       <FAQSection />
      
      
-      {/* <CommunitySection /> */}
+      {/* <CommunitySection/> */}
       <BenefitsSection />
      
 
     
       <Footer/>
+      <GeonixaBottom/>
       <Analytics/>
      
     </>

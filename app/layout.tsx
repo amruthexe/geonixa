@@ -45,8 +45,8 @@ export default function RootLayout({
           {children}
 
           <div className="fixed bottom-8 right-8 md:bottom-4 md:right-4 flex flex-col gap-3 items-center z-50">
-            <Link href="tel:+919606995925">
-              <div className="bg-blue-950 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
+            <Link href="tel:+919999999999">
+              <div className="bg-[#eb4917]  text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
                 <FaPhoneAlt size={20} />
               </div>
             </Link>
@@ -54,15 +54,15 @@ export default function RootLayout({
             
 
           
-            <Link
-              href="https://wa.me/919606995925?text=I%20am%20interested"
+            {/* <Link
+              href="https://wa.me/919999999999?text=I%20am%20interested"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all animate-blink">
                 <FaWhatsapp size={20} />
               </div>
-            </Link>
+            </Link> */}
           </div>
       </body>
     </html>

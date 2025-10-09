@@ -86,11 +86,11 @@ const AboutUs = () => {
             <MapPin className="w-6 h-6" /> Our Location
           </h2>
           <p className="mb-4 text-base">
-          Mitutoyo Complex, Mahakavi Vemana Rd, KHB Block Koramangala, Koramangala 4-B Block, Koramangala, Bengaluru, Karnataka 560034
+          247,Trendz aspire, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033ngaluru, Karnataka 560034
           </p>
           <div className="grid md:grid-cols-2 gap-6 items-start">
           <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.535120446887!2d77.61011677507456!3d12.91729798739148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14fa70bb118f%3A0x7e05707e0e785117!2sBTM%202nd%20Stage%2C%20Bengaluru%2C%20Karnataka%20560076%2C%20India!5e0!3m2!1sen!2sin!4v1689500000000!5m2!1sen!2sin"
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.42700040869!2d78.39481119999999!3d17.439265100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9193a2bfabab%3A0xd2193f2d37b866aa!2sTrendz%20aspire!5e0!3m2!1sen!2sin!4v1760037382039!5m2!1sen!2sin" 
   width="100%"
   height="300"
   frameBorder="0"
@@ -108,7 +108,7 @@ const AboutUs = () => {
                 <a href="https://www.instagram.com/talenttrek_/profilecard/?igsh=MWdsNjVkOHV1bHlmZA==" target="_blank" rel="noopener noreferrer">
                   <FaInstagram className="text-pink-600 hover:text-pink-800" />
                 </a>
-                <a href="https://wa.me/919606995925" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="text-green-600 hover:text-green-800" />
                 </a>
                

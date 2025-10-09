@@ -6,7 +6,6 @@ import Container from "@/components/global/container";
 import Wrapper from "@/components/global/wrapper";
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaFacebookF, FaGithub } from "react-icons/fa";
 
-// Data for route list, service list, and program list
 const routeList = [
   { href: "/team", label: "Team" },
   { href: "/careers", label: "Careers" },
@@ -14,8 +13,8 @@ const routeList = [
 ];
 const routeLists = [
   { href: "/support", label: "Support" },
-  { href: "/privacy-policy", label: "Privacy Policy" },  // Added Privacy Policy
-  { href: "/refund-policy", label: "Refund Policy" },    // Added Refund Policy
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/refund-policy", label: "Refund Policy" },
 ];
 
 const serviceList = [
@@ -42,17 +41,17 @@ const programList = [
 
 const Footer = () => {
   return (
-    <footer className="w-full py-10 relative">
+    <footer className="w-full py-10 relative bg-white border-t border-[#eb4917]/30">
       <Container>
         <Wrapper className="relative flex flex-col md:flex-row justify-between pb-4 overflow-hidden footer">
           <div className="flex flex-col items-start max-w-48">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-medium">GeoNixa</span>
+              <span className="text-xl font-bold text-[#eb4917]">GeoNixa</span>
             </div>
-            <p className="text-base max-w mt-4">
+            <p className="text-base text-[#eb4917]/90 max-w mt-4">
               We are an edtech startup helping students excel in their careers.
             </p>
-            <Button className="mt-8">
+            <Button className="mt-8 bg-[#eb4917] hover:bg-[#d73f10] text-white">
               <Link href="/app">Start for free</Link>
             </Button>
           </div>
@@ -60,81 +59,78 @@ const Footer = () => {
           {/* Route Links Section */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-lg mt-10 md:mt-0">
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium">Company</h4>
+              <h4 className="text-sm font-medium text-[#eb4917]">Company</h4>
               <ul className="space-y-4 w-full">
                 {routeList.map((route, index) => (
-                  <li key={index} className="text-sm text-muted-foreground hover:text-foreground transition-all w-full">
+                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={route.href} className="w-full">{route.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Service Links Section */}
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium">Services</h4>
+              <h4 className="text-sm font-medium text-[#eb4917]">Services</h4>
               <ul className="space-y-4 w-full">
                 {serviceList.map((service, index) => (
-                  <li key={index} className="text-sm text-muted-foreground hover:text-foreground transition-all w-full">
+                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={service.href} className="w-full">{service.title}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Program Links Section */}
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium">Programs</h4>
+              <h4 className="text-sm font-medium text-[#eb4917]">Programs</h4>
               <ul className="space-y-4 w-full">
                 {programList.map((program, index) => (
-                  <li key={index} className="text-sm text-muted-foreground hover:text-foreground transition-all w-full">
+                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={program.href} className="w-full">{program.title}</Link>
                   </li>
                 ))}
               </ul>
             </div>
+
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium">Other</h4>
+              <h4 className="text-sm font-medium text-[#eb4917]">Other</h4>
               <ul className="space-y-4 w-full">
                 {routeLists.map((route, index) => (
-                  <li key={index} className="text-sm text-muted-foreground hover:text-foreground transition-all w-full">
+                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={route.href} className="w-full">{route.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-
           </div>
         </Wrapper>
       </Container>
 
       {/* Bottom Socials */}
-     <Container>
-  <Wrapper className="pt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center sm:text-left">
-    <p className="text-sm text-secondary-foreground">
-      &copy; {new Date().getFullYear()} GeoNixa All rights reserved.
-    </p>
-   
-    <div className="flex justify-center sm:justify-end items-center gap-4">
-      <Link href="https://www.linkedin.com" target="_blank" className="p-1">
-        <FaLinkedin className="w-5 h-5 text-muted-foreground hover:text-secondary-foreground" />
-      </Link>
-      <Link href="https://www.instagram.com" target="_blank" className="p-1">
-        <FaInstagram className="w-5 h-5 text-muted-foreground hover:text-secondary-foreground" />
-      </Link>
-      <Link href="https://wa.me/919999999999" target="_blank" className="p-1">
-        <FaWhatsapp className="w-5 h-5 text-muted-foreground hover:text-secondary-foreground" />
-      </Link>
-      <Link href="https://www.facebook.com" target="_blank" className="p-1">
-        <FaFacebookF className="w-5 h-5 text-muted-foreground hover:text-secondary-foreground" />
-      </Link>
-      <Link href="https://github.com" target="_blank" className="p-1">
-        <FaGithub className="w-5 h-5 text-muted-foreground hover:text-secondary-foreground" />
-      </Link>
-    </div>
-  </Wrapper>
-</Container>
+      <Container>
+        <Wrapper className="pt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center sm:text-left">
+          <p className="text-sm text-[#eb4917]/70">
+            &copy; {new Date().getFullYear()} GeoNixa. All rights reserved.
+          </p>
 
+          <div className="flex justify-center sm:justify-end items-center gap-4">
+            <Link href="https://www.linkedin.com" target="_blank" className="p-1">
+              <FaLinkedin className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+            </Link>
+            <Link href="https://www.instagram.com" target="_blank" className="p-1">
+              <FaInstagram className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+            </Link>
+            <Link href="https://wa.me/919999999999" target="_blank" className="p-1">
+              <FaWhatsapp className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+            </Link>
+            <Link href="https://www.facebook.com" target="_blank" className="p-1">
+              <FaFacebookF className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+            </Link>
+            <Link href="https://github.com" target="_blank" className="p-1">
+              <FaGithub className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+            </Link>
+          </div>
+        </Wrapper>
+      </Container>
     </footer>
   );
 };

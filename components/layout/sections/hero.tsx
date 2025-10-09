@@ -75,7 +75,7 @@ export const HeroSection = () => {
             <div className="space-y-4 md:space-y-0 md:space-x-4">
               <Button asChild className="w-5/6 md:w-1/4 font-bold bg-[#eb4917] group/arrow">
                 <Link
-                  href="https://wa.me/919606995925?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+                  href="https://wa.me/919999999999?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
                   target="_blank"
                 >
                   Book a Demo
@@ -88,7 +88,7 @@ export const HeroSection = () => {
                 variant="secondary"
                 className="w-5/6 md:w-1/4 font-bold bg-grey-300"
               >
-                <Link href="tel:+919606995925">Call Us</Link>
+                <Link href="tel:+919999999999">Call Us</Link>
               </Button>
             </div>
           </div>

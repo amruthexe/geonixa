@@ -57,7 +57,7 @@ export default function BlockchainDevelopmentPromo() {
               asChild
               className="font-bold w-full sm:w-52 bg-black hover:bg-gray-800 text-white rounded-full px-6 py-3 transition"
             >
-              <Link href="https://wa.me/919606995925?text=Hi%2C%20I'm%20interested%20in%20your%20Blockchain%20Development%20course.">
+              <Link href="https://wa.me/919999999999?text=Hi%2C%20I'm%20interested%20in%20your%20Blockchain%20Development%20course.">
                 Enroll for ₹4999
                 <Play className="ml-2 w-4 h-4" />
               </Link>
@@ -68,7 +68,7 @@ export default function BlockchainDevelopmentPromo() {
               variant="outline"
               className="font-bold w-full sm:w-52 border-2 border-black text-black hover:bg-gray-50 rounded-full px-6 py-3 transition"
             >
-              <Link href="tel:+919606995925">Call Us</Link>
+              <Link href="tel:+919999999999">Call Us</Link>
             </Button>
           </div>
         </div>

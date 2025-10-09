@@ -246,7 +246,7 @@ export const SpecialProgramsPricingSection = () => {
 
                     <CardFooter className="flex flex-col gap-2">
                       <Link
-                        href="https://wa.me/+919606995925?text=I%20am%20interested%20in%20your%20special%20programs."
+                        href="https://wa.me/+919999999999?text=I%20am%20interested%20in%20your%20special%20programs."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full"

@@ -64,7 +64,7 @@ export default function IOTPromo() {
               asChild
               className="w-5/6 sm:w-1/3 font-bold group/arrow bg-black hover:bg-gray-800 text-white rounded-full px-24 py-3 transition duration-300"
             >
-              <Link href="https://wa.me/919606995925?text=Hi%2C%20I'm%20interested%20in%20your%20IoT%20course.">
+              <Link href="https://wa.me/919999999999?text=Hi%2C%20I'm%20interested%20in%20your%20IoT%20course.">
                 Start Learning at ₹4999
                 <Play className="size-4 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>
@@ -75,7 +75,7 @@ export default function IOTPromo() {
               variant="outline"
               className="w-5/6 sm:w-1/3 font-bold border-2 border-black text-black hover:bg-gray-50 rounded-full px-8 py-3 transition duration-300"
             >
-              <Link href="tel:+919606995925">Call Us</Link>
+              <Link href="tel:+919999999999">Call Us</Link>
             </Button>
           </div>
         </div>
