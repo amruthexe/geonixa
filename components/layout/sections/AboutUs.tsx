@@ -86,7 +86,7 @@ const AboutUs = () => {
             <MapPin className="w-6 h-6" /> Our Location
           </h2>
           <p className="mb-4 text-base">
-          247,Trendz aspire, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033ngaluru, Karnataka 560034
+          247,Trendz aspire, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033
           </p>
           <div className="grid md:grid-cols-2 gap-6 items-start">
           <iframe
