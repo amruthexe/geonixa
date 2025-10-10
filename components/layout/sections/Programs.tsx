@@ -34,14 +34,14 @@ const programs = [
 export default function Programs() {
   return (
     <section className="py-12 bg-white dark:bg-neutral-900">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-snug">
             Accelerate your expertise with{" "}
             <span className="text-orange-500">Learning Journeys</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+          <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mt-2">
             Explore top-rated programs and boost your career growth
           </p>
         </div>
@@ -51,10 +51,10 @@ export default function Programs() {
           {programs.map((program) => (
             <div
               key={program.slug}
-              className="bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 flex flex-col"
+              className="bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col"
             >
               {/* Image Section */}
-              <div className="relative w-full h-48 sm:h-52 md:h-56">
+              <div className="relative w-full h-44 sm:h-52 md:h-56">
                 <Image
                   src={program.image}
                   alt={program.title}
@@ -69,7 +69,7 @@ export default function Programs() {
               {/* Text Content */}
               <div className="flex flex-col justify-between p-5 flex-1">
                 <div>
-                  <h4 className="text-[13px] font-medium text-gray-500 mb-1 uppercase">
+                  <h4 className="text-[12px] sm:text-[13px] font-medium text-gray-500 mb-1 uppercase tracking-wide">
                     GEONIXA EDUTECH EXECUTIVE EDUCATION
                   </h4>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 leading-snug">

@@ -28,7 +28,6 @@ export default function RootLayout({
 <meta name="description" content="Join GeoNixa – an edtech startup offering affordable online courses in coding, web development, and future-ready skills. Start learning today." />
 <meta property="og:title" content="GeoNixa | Learn Web Development Online" />
 <meta property="og:description" content="GeoNixa is your go-to e-learning platform for mastering coding and tech skills with real-world projects and expert mentors." />
-<meta property="og:image" content="https://raw.githubusercontent.com/amruthexe/Talent-trek/main/app/favicon.ico" />
 
     <body className={cn("min-h-screen", inter.className)}>
 
