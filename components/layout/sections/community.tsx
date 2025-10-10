@@ -35,7 +35,7 @@ export const CommunitySection = () => {
             <CardFooter>
             <Button asChild className="bg-red-600 hover:bg-red-700 text-white flex items-center space-x-2">
                 <Link
-                  href="https://wa.me/+919999999999?text=I%20am%20interested%20in%20your%20digital%20services."
+                  href="https://wa.me/+919663216581?text=I%20am%20interested%20in%20your%20digital%20services."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

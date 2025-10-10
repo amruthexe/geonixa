@@ -110,7 +110,7 @@ export default function SupportPage() {
           </p>
           <p className="flex items-start gap-2 text-sm sm:text-base">
             <Mail className="text-black hidden sm:block" />
-            Email: <strong className="text-black">hr@talenttrekelearning.com</strong>
+            Email: <strong className="text-black"> hr@geonixa.com</strong>
           </p>
         </div>
 

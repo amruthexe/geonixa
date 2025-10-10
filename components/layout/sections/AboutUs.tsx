@@ -102,13 +102,11 @@ const AboutUs = () => {
             <div className="flex flex-col gap-4 justify-center">
               <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
               <div className="flex gap-4 text-2xl">
-                <a href="https://www.linkedin.com/company/talent-trek-e-learning/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/geonixa//" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin className="text-blue-700 hover:text-blue-900" />
                 </a>
-                <a href="https://www.instagram.com/talenttrek_/profilecard/?igsh=MWdsNjVkOHV1bHlmZA==" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram className="text-pink-600 hover:text-pink-800" />
-                </a>
-                <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+                
+                <a href="https://wa.me/919663216581" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="text-green-600 hover:text-green-800" />
                 </a>
                

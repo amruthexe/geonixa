@@ -21,7 +21,7 @@ const CTA = () => {
                         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-6 mt-6">
                             <Button asChild className="mr-4 font-bold group/arrow">
                                           <Link
-                                            href="https://wa.me/919999999999?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+                                            href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
                                             target="_blank"
                                           >
                                             Book a demo now 🚀

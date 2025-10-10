@@ -314,7 +314,7 @@ export const Navbar = () => {
       <div className="hidden lg:flex">
         <Button asChild className="mr-4 font-bold group/arrow">
           <Link
-            href="https://wa.me/919999999999?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+            href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
             target="_blank"
           >
             Book a demo now 🚀
@@ -323,7 +323,7 @@ export const Navbar = () => {
         </Button>
         <Button asChild size="sm" variant="ghost">
           <Link
-            href="https://wa.me/919999999999?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+            href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
             target="_blank"
           >
             <FaWhatsapp className="size-5" />

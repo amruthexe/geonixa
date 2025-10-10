@@ -75,7 +75,7 @@ export function VideoHero() {
 
               {/* Enquiry Phone */}
               <p className="text-sm text-gray-400">
-                For enquiries call: hr@talenttrekelearning.com
+                For enquiries call:  hr@geonixa.com
 
               </p>
             </div>

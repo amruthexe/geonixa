@@ -63,6 +63,23 @@ export const ContactSection = () => {
               <div >247, Trendz Aspire, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033</div>
             </div>
 
+             <div>
+              <div className="flex gap-2 mb-1">
+                <Phone className="text-[#eb4917]" />
+                <div className="font-bold">Call us</div>
+              </div>
+              <div>+91-9663216581
+              </div>
+            </div>
+
+            <div>
+              <div className="flex gap-2 mb-1">
+                <Mail className="text-[#eb4917]" />
+                <div className="font-bold">Mail Us</div>
+              </div>
+              <div>hr@geonixa.com</div>
+            </div>
+
            
 
         

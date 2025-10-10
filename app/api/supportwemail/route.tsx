@@ -23,7 +23,7 @@ export async function POST(req: Request) {
 
     await transporter.sendMail({
       from: process.env.MAIL_USER,
-      to: "hr@talenttrekelearning.com",
+      to: " hr@geonixa.com",
       subject: "🔔 New Support Request from GeoNixa Website",
       html: `
         <h2>New Support Submission</h2>

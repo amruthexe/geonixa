@@ -113,13 +113,13 @@ const Footer = () => {
           </p>
 
           <div className="flex justify-center sm:justify-end items-center gap-4">
-            <Link href="https://www.linkedin.com" target="_blank" className="p-1">
+            <Link href="https://www.linkedin.com/company/geonixa/" target="_blank" className="p-1">
               <FaLinkedin className="w-5 h-5 hover:text-[#eb4917]" />
             </Link>
             <Link href="https://www.instagram.com" target="_blank" className="p-1">
               <FaInstagram className="w-5 h-5 hover:text-[#eb4917]" />
             </Link>
-            <Link href="https://wa.me/919999999999" target="_blank" className="p-1">
+            <Link href="https://wa.me/919663216581" target="_blank" className="p-1">
               <FaWhatsapp className="w-5 h-5  hover:text-[#eb4917]" />
             </Link>
             <Link href="https://www.facebook.com" target="_blank" className="p-1">

@@ -48,7 +48,7 @@ export function CareerProHero() {
               </div>
 
               <p className="text-sm text-gray-400">
-                For queries, email: hr@talenttrekelearning.com
+                For queries, email:  hr@geonixa.com
               </p>
             </div>
           </div>

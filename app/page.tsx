@@ -54,7 +54,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "https://www.talenttrekelearning.info/", // Replace with your domain
+    site: "https://www.geonixa.com/", // Replace with your domain
     title: "GeoNixa | Learn Web Development & Job-Ready Skills Online",
     description:
       "Master coding, web development, and career skills with GeoNixa's expert-led, affordable courses. Start learning today.",
