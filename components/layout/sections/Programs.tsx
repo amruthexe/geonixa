@@ -1,122 +1,197 @@
 "use client";
 
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight, Clock, BadgeCheck } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 const programs = [
   {
-    title: "Full Stack Development",
+    title: "Web Development",
     subtitle: "Frontend + Backend + Deployment",
-    duration: "3 Months | Online",
-    applyDate: "October 20, 2025",
-    image: "/course/andriod.png",
-    slug: "fullstack",
+    duration: "2–3 Months",
+    image: "/webdev.png",
+    slug: "web",
   },
   {
-    title: "AI & Data Science",
-    subtitle: "Python + Machine Learning + AI Projects",
-    duration: "4 Months | Online",
-    applyDate: "November 5, 2025",
+    title: "App Development",
+    subtitle: "Flutter + React Native + Publishing",
+    duration: "2–3 Months",
+    image: "/course/andriod.png",
+    slug: "app-dev",
+  },
+  {
+    title: "Cloud Computing",
+    subtitle: "AWS + DevOps + Real-time Projects",
+    duration: "3 Months",
+    image: "/course/cloud.png",
+    slug: "cloud-comp",
+  },
+  {
+    title: "Cyber Security",
+    subtitle: "Ethical Hacking + Threat Detection + Tools",
+    duration: "3 Months",
+    image: "/course/cyber.png",
+    slug: "cyber-security",
+  },
+  {
+    title: "Data Science",
+    subtitle: "Python + ML + AI + Projects",
+    duration: "3–4 Months",
     image: "/course/ds.png",
     slug: "data-science",
   },
-  {
-    title: "Cyber Security & Cloud",
-    subtitle: "AWS + Ethical Hacking + DevOps",
-    duration: "4 Months | Online",
-    applyDate: "November 15, 2025",
-    image: "/course/cloud.png",
-    slug: "cyber-cloud",
-  },
 ];
 
-export default function Programs() {
+export const Programs = () => {
+  const [startIndex, setStartIndex] = useState(0);
+  const visiblePrograms = programs.slice(startIndex, startIndex + 3);
+
+  const handleNext = () => {
+    if (startIndex + 3 < programs.length) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
   return (
-    <section className="py-12 bg-white dark:bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-snug">
+    <section className="py-14 bg-background dark:bg-black">
+      <div className="container relative">
+       <h2 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold text-gray-900 dark:text-white leading-snug">
             Accelerate your expertise with{" "}
             <span className="text-orange-500">Learning Journeys</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mt-2">
-            Explore top-rated programs and boost your career growth
-          </p>
-        </div>
 
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {programs.map((program) => (
-            <div
-              key={program.slug}
-              className="bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col"
-            >
-              {/* Image Section */}
-              <div className="relative w-full h-44 sm:h-52 md:h-56">
-                <Image
-                  src={program.image}
-                  alt={program.title}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute top-3 left-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded">
-                  Learning Journey
-                </div>
-              </div>
+        {/* Desktop View with Arrows */}
+        <div className="mt-10 hidden md:block relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500 ease-in-out">
+            <AnimatePresence mode="wait">
+              {visiblePrograms.map((program) => (
+                <motion.div
+                  key={program.slug}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.4 }}
+                  className="bg-card dark:bg-muted/40 border rounded-2xl shadow-sm p-4 flex flex-col justify-between"
+                >
+                  <Image
+                    src={program.image}
+                    alt={program.title}
+                    width={400}
+                    height={200}
+                    className="rounded-md object-cover w-full h-[210px]"
+                  />
+                  <div className="mt-4">
+                    <h4 className="text-muted-foreground text-sm font-medium">Explore Our Courses</h4>
+                    <h3 className="text-lg font-semibold mt-1 mb-2">
+                      {program.title}
+                    </h3>
+                    <p className="text-sm text-black dark:text-blue-400">
+                      {program.subtitle}
+                    </p>
+                    <div className="flex items-center justify-between text-sm text-muted-foreground mt-4">
+                      <span className="flex items-center gap-1">
+                        <BadgeCheck className="w-4 h-4" /> Certification
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" /> {program.duration}
+                      </span>
+                    </div>
+                  </div>
 
-              {/* Text Content */}
-              <div className="flex flex-col justify-between p-5 flex-1">
-                <div>
-                  <h4 className="text-[12px] sm:text-[13px] font-medium text-gray-500 mb-1 uppercase tracking-wide">
-                    GEONIXA EDUTECH EXECUTIVE EDUCATION
-                  </h4>
-                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 leading-snug">
-                    {program.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-3 leading-relaxed">
-                    {program.subtitle}
-                  </p>
-                  <p className="text-sm font-medium text-gray-700 dark:text-gray-400">
-                    {program.duration}
-                  </p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Last Date to Apply:{" "}
-                    <span className="font-semibold text-orange-600">
-                      {program.applyDate}
-                    </span>
-                  </p>
-                </div>
+                  <div className="mt-4 flex justify-center">
+                    <Link href={`/${program.slug}`} className="w-full">
+                      <Button variant="outline" className="w-full">
+                        View Program
+                      </Button>
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
 
-                {/* Buttons Section */}
-                <div className="flex flex-col sm:flex-row gap-2 mt-5">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full text-sm py-2">
-                    Download Brochure
-                  </Button>
-                  <Link href={`/${program.slug}`} className="w-full">
-                    <Button
-                      variant="outline"
-                      className="w-full border-orange-500 text-orange-600 hover:bg-orange-50 text-sm py-2"
-                    >
-                      View Program
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+          {startIndex > 0 && (
+            <div className="absolute top-[50%] -translate-y-1/2 left-0 -ml-12">
+              <Button
+                onClick={handlePrev}
+                variant="ghost"
+                size="icon"
+                className="rounded-full bg-blue-950 text-white hover:bg-blue-900"
+              >
+                <ArrowLeft className="w-6 h-6" />
+              </Button>
             </div>
-          ))}
+          )}
+
+          {startIndex + 3 < programs.length && (
+            <div className="absolute top-[50%] -translate-y-1/2 right-0 -mr-12">
+              <Button
+                onClick={handleNext}
+                variant="ghost"
+                size="icon"
+                className="rounded-full bg-blue-950 text-white hover:bg-blue-900 dark:bg-blue-900"
+              >
+                <ArrowRight className="w-6 h-6" />
+              </Button>
+            </div>
+          )}
         </div>
 
-        {/* View All Button */}
-        <div className="flex justify-center mt-10">
-          <Link href="/programs">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm sm:text-base px-5 py-2">
-              View all programs →
-            </Button>
-          </Link>
+        {/* Mobile View */}
+        <div className="mt-10 flex flex-col gap-6 md:hidden">
+          {programs.map((program) => (
+            <motion.div
+              key={program.slug}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="bg-card dark:bg-muted/40 border rounded-2xl shadow-sm p-4 flex flex-col justify-between"
+            >
+              <Image
+                src={program.image}
+                alt={program.title}
+                width={400}
+                height={200}
+                className="rounded-md object-cover w-full h-[180px]"
+              />
+              <div className="mt-4">
+                <h4 className="text-muted-foreground text-sm font-medium">Explore Our Courses</h4>
+                <h3 className="text-lg font-semibold mt-1 mb-2">
+                  {program.title}
+                </h3>
+                <p className="text-sm text-black dark:text-black">
+                  {program.subtitle}
+                </p>
+                <div className="flex items-center justify-between text-sm text-muted-foreground mt-4">
+                  <span className="flex items-center gap-1">
+                    <BadgeCheck className="w-4 h-4" /> Certification
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" /> {program.duration}
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-4 flex justify-center">
+                <Link href={`/${program.slug}`} className="w-full">
+                  <Button variant="outline" className="w-full">
+                    View Program
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
-}
+};
