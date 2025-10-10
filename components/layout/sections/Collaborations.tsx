@@ -36,7 +36,7 @@ export default function Collaborations() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
           {/* Text Section */}
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#eb4917] leading-snug">
               Trusted by India’s leading organizations
             </h2>
             <p className="text-gray-600 mt-5 text-lg leading-relaxed">

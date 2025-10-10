@@ -41,7 +41,7 @@ const programList = [
 
 const Footer = () => {
   return (
-    <footer className="w-full py-10 relative bg-white border-t border-[#eb4917]/30">
+    <footer className="w-full py-10 relative bg-white border-t ">
       <Container>
         <Wrapper className="relative flex flex-col md:flex-row justify-between pb-4 overflow-hidden footer">
           <div className="flex flex-col items-start max-w-48">
@@ -59,7 +59,7 @@ const Footer = () => {
           {/* Route Links Section */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-lg mt-10 md:mt-0">
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium text-[#eb4917]">Company</h4>
+              <h4 className="text-sm font-medium">Company</h4>
               <ul className="space-y-4 w-full">
                 {routeList.map((route, index) => (
                   <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium text-[#eb4917]">Services</h4>
+              <h4 className="text-sm font-medium]">Services</h4>
               <ul className="space-y-4 w-full">
                 {serviceList.map((service, index) => (
                   <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
@@ -81,7 +81,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium text-[#eb4917]">Programs</h4>
+              <h4 className="text-sm font-medium]">Programs</h4>
               <ul className="space-y-4 w-full">
                 {programList.map((program, index) => (
                   <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
@@ -92,7 +92,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium text-[#eb4917]">Other</h4>
+              <h4 className="text-sm font-medium]">Other</h4>
               <ul className="space-y-4 w-full">
                 {routeLists.map((route, index) => (
                   <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
@@ -108,25 +108,25 @@ const Footer = () => {
       {/* Bottom Socials */}
       <Container>
         <Wrapper className="pt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center sm:text-left">
-          <p className="text-sm text-[#eb4917]/70">
+          <p className="text-sm ">
             &copy; {new Date().getFullYear()} GeoNixa. All rights reserved.
           </p>
 
           <div className="flex justify-center sm:justify-end items-center gap-4">
             <Link href="https://www.linkedin.com" target="_blank" className="p-1">
-              <FaLinkedin className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+              <FaLinkedin className="w-5 h-5 hover:text-[#eb4917]" />
             </Link>
             <Link href="https://www.instagram.com" target="_blank" className="p-1">
-              <FaInstagram className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+              <FaInstagram className="w-5 h-5 hover:text-[#eb4917]" />
             </Link>
             <Link href="https://wa.me/919999999999" target="_blank" className="p-1">
-              <FaWhatsapp className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+              <FaWhatsapp className="w-5 h-5  hover:text-[#eb4917]" />
             </Link>
             <Link href="https://www.facebook.com" target="_blank" className="p-1">
-              <FaFacebookF className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+              <FaFacebookF className="w-5 h-5 hover:text-[#eb4917]" />
             </Link>
             <Link href="https://github.com" target="_blank" className="p-1">
-              <FaGithub className="w-5 h-5 text-[#eb4917]/80 hover:text-[#eb4917]" />
+              <FaGithub className="w-5 h-5  hover:text-[#eb4917]" />
             </Link>
           </div>
         </Wrapper>

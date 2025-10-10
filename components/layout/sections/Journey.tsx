@@ -53,8 +53,8 @@ export default function Journey() {
 
       {/* Right: Progress Steps */}
       <div className="flex flex-col gap-5 w-full md:w-1/3">
-        <h2 className="text-3xl font-bold text-red-500">
-          Your Journey At <span className="text-[#ff4a4a]">GEO NIXA</span>
+        <h2 className="text-3xl md:text-4xl text-[#eb4917] text-center font-bold mb-4">
+          Your Journey At <span className="text-3xl md:text-4xl text-[#eb4917] text-center font-bold mb-4">GEO NIXA</span>
         </h2>
         <p className="text-gray-600 text-sm">
           Daily practice, hands-on projects, and consistent feedback – your

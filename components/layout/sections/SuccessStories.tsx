@@ -61,10 +61,8 @@ export default function SuccessStories() {
     <section className="w-full py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Headings */}
-        <h3 className="text-sm font-semibold tracking-widest text-orange-600 mb-2">
-          LEARNER IMPACT
-        </h3>
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">
+       
+        <h2 className="text-3xl md:text-4xl text-[#eb4917] text-center font-bold mb-4">
           Real results from real learners 🚀
         </h2>
 

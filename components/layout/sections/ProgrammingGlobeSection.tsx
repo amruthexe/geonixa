@@ -37,12 +37,12 @@ const orbitLogos = [
 
 export default function ProgrammingGlobeSection() {
   return (
-    <section className="bg-gradient-to-b from-white via-orange-50 to-orange-100 text-gray-900 py-16 px-6 md:px-16 flex flex-col lg:flex-row items-center justify-between overflow-hidden">
+    <section className="bg-gradient-to-b my-16 from-white via-orange-50 to-orange-100 text-gray-900 py-16 px-4 md:px-8 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 overflow-hidden">
       {/* Left Content */}
-      <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+      <div className="lg:w-[48%] space-y-6 text-center lg:text-left">
+        <h2 className="text-3xl md:text-4xl text-[#eb4917]  font-bold mb-4">
           Certified for a True{" "}
-          <span className="text-blue-500">Coding Experience</span>
+          <span className="text-3xl md:text-4xl text-[#eb4917]  font-bold mb-4">Coding Experience</span>
         </h2>
         <p className="text-gray-600 max-w-lg mx-auto lg:mx-0">
           Empower your learning with our EDTECH platform designed for a real-world programming experience.
@@ -67,7 +67,7 @@ export default function ProgrammingGlobeSection() {
       </div>
 
       {/* Right Globe */}
-      <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] mt-12 lg:mt-0 flex items-center justify-center">
+      <div className="relative w-[280px] h-[280px] ml-8 sm:w-[350px] sm:h-[350px] flex items-center justify-center">
         {/* Soft glowing background */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-600 via-orange-400 to-orange-500 blur-3xl"></div>
 
@@ -79,7 +79,7 @@ export default function ProgrammingGlobeSection() {
         >
           {orbitLogos.map((logo, index) => {
             const angle = (index / orbitLogos.length) * 2 * Math.PI;
-            const radius = 160; // increased radius for better spacing
+            const radius = 140; // slightly smaller radius for compact look
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
 
@@ -94,13 +94,13 @@ export default function ProgrammingGlobeSection() {
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="w-[65px] h-[65px] sm:w-[75px] sm:h-[75px] bg-white rounded-2xl shadow-lg flex items-center justify-center"
+                  className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] bg-white rounded-2xl shadow-lg flex items-center justify-center"
                 >
                   <Image
                     src={logo}
                     alt="tech-logo"
-                    width={45}
-                    height={45}
+                    width={40}
+                    height={40}
                     className="object-contain"
                   />
                 </motion.div>
@@ -110,10 +110,9 @@ export default function ProgrammingGlobeSection() {
         </motion.div>
 
         {/* Center logo */}
-        <div className="absolute flex items-center justify-center w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] rounded-full border-2  bg-white/60 backdrop-blur-md shadow-md">
+        <div className="absolute flex items-center justify-center w-[110px] h-[110px] sm:w-[130px] sm:h-[130px] rounded-full border-2 bg-white/60 backdrop-blur-md shadow-md">
           <span className="font-bold text-base sm:text-lg text-black text-center">
             GeoNixa
-          
           </span>
         </div>
       </div>

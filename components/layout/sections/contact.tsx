@@ -47,10 +47,10 @@ export const ContactSection = () => {
         {/* Left content: Company info */}
         <div>
           <div className="mb-4">
-            <h2 className="text-lg mb-2 font-bold tracking-wider text-[#eb4917]">Contact</h2>
+           
             <h2 className="text-3xl md:text-4xl font-bold text-[#eb4917]">Connect With Us</h2>
           </div>
-          <p className="mb-8 lg:w-5/6 text-[#eb4917]/80">
+          <p className="mb-8 lg:w-5/6 ">
             At GeoNixa E-Learning, we are committed to helping learners upskill with high-quality, industry-relevant education. Reach out to us for any queries regarding our programs or enrollment.
           </p>
 
@@ -58,9 +58,9 @@ export const ContactSection = () => {
             <div>
               <div className="flex gap-2 mb-1">
                 <Building2 className="text-[#eb4917]" />
-                <div className="font-bold text-[#eb4917]">Find us</div>
+                <div className="font-bold ">Find us</div>
               </div>
-              <div className="text-[#eb4917]/90">247, Trendz Aspire, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033</div>
+              <div >247, Trendz Aspire, Kavuri Hills, Madhapur, Hyderabad, Telangana 500033</div>
             </div>
 
            
@@ -70,9 +70,9 @@ export const ContactSection = () => {
             <div>
               <div className="flex gap-2">
                 <Clock className="text-[#eb4917]" />
-                <div className="font-bold text-[#eb4917]">Visit us</div>
+                <div className="font-bold ">Visit us</div>
               </div>
-              <div className="text-[#eb4917]/90">
+              <div className="">
                 <div>Monday - Friday</div>
                 <div>9AM - 6PM</div>
               </div>
@@ -81,7 +81,7 @@ export const ContactSection = () => {
         </div>
 
         {/* Right content: Contact Form */}
-        <Card className="bg-[#fff3f0] border border-[#eb4917]/20">
+        <Card className=" border">
           <CardHeader className="text-[#eb4917] text-2xl">Contact Form</CardHeader>
           <CardContent>
             <Form {...form}>

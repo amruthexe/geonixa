@@ -27,65 +27,63 @@ interface ReviewProps {
 const reviewList: ReviewProps[] = [
   {
     image: "https://github.com/shadcn.png",
-    name: "John Doe",
-    userName: "Product Manager",
+    name: "Aarav Patel",
+    userName: "Full Stack Developer Trainee",
     comment:
-      "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "GeoNixa has completely transformed my coding journey! The mentors explain every concept in depth and connect it to real-world projects. Highly recommend it to anyone starting out.",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
-    userName: "Cybersecurity Analyst",
+    name: "Priya Sharma",
+    userName: "Data Analytics Student",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      "I loved the way the Data Analytics course blends theory with hands-on practice. The doubt support and mock interviews helped me gain real confidence.",
+    rating: 4.9,
+  },
+  {
+    image: "https://github.com/shadcn.png",
+    name: "Rohit Verma",
+    userName: "Software Engineering Intern",
+    comment:
+      "The courses are designed perfectly for beginners and working professionals. I joined the Python & React programs — both are structured and project-driven.",
     rating: 4.8,
   },
-
   {
     image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
+    name: "Sneha Iyer",
+    userName: "UI/UX Design Student",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    rating: 4.9,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "The UI/UX sessions at GeoNixa are top-notch. I created my first complete portfolio within two months. The design mentors are really helpful and creative!",
     rating: 5.0,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
+    name: "Karthik Reddy",
+    userName: "Machine Learning Enthusiast",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
-    rating: 5.0,
+      "GeoNixa’s AI & ML program gave me a clear path to follow — from basic Python to real model deployment. The live projects were the best part of the course.",
+    rating: 4.9,
   },
   {
     image: "https://github.com/shadcn.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
+    name: "Ananya Das",
+    userName: "B.Tech Student, CSE",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    rating: 4.9,
+      "The mentors are very supportive, and the community is super active. GeoNixa made learning coding enjoyable instead of stressful!",
+    rating: 5.0,
   },
 ];
+
 
 export const TestimonialSection = () => {
   return (
     <section id="testimonials" className="container py-24 sm:py-32">
       <div className="text-center mb-8">
-        <h2 className="text-lg font-bold text-primary text-center mb-2 tracking-wider">
-          Testimonials
-        </h2>
+       
 
-        <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          Hear What Our 1000+ Clients Say
+        <h2 className="text-3xl md:text-4xl text-[#eb4917] text-center font-bold mb-4">
+          Hear What Our 100+ Students Say
         </h2>
       </div>
 

@@ -9,7 +9,7 @@ import { FAQSection } from "@/components/layout/sections/faq";
 import {  NextGenEdTechFeatures } from "@/components/layout/sections/features";
 import { HeroSection } from "@/components/layout/sections/hero";
 import  Container from "@/components/global/container";
-import { Programs } from "@/components/layout/sections/Programs";
+import  Programs  from "@/components/layout/sections/Programs";
 import VerticalsSection from "@/components/layout/sections/VerticalsSection";
 import VisitCenterSection from "@/components/layout/sections/VisitCenterSection";
 import Reviews from "@/components/layout/sections/Reviews";
@@ -32,6 +32,7 @@ import TeamPlatformSection from "@/components/layout/sections/TeamPlatformSectio
 import SuccessStories from "@/components/layout/sections/SuccessStories";
 import GeonixaBottom from "@/components/layout/sections/GeonixaBottom";
 import { CommunitySection } from "@/components/layout/sections/community";
+import { TestimonialSection } from "@/components/layout/sections/testimonial";
 export const metadata = {
   title: "GeoNixa | Online Learning Platform for Skill Development",
   description:
@@ -80,7 +81,7 @@ export default function Home() {
                
             
                 {/* <ExplorePrograms/> */}
-                <FeaturesSectionDemo/>
+                {/* <FeaturesSectionDemo/> */}
                 {/* <BrainBattleWinners/> */}
                 {/* <CourseOfferings/> */}
              <SuccessStories/>
@@ -91,7 +92,7 @@ export default function Home() {
 
               
  
-      <NextGenEdTechFeatures />
+    
       <CommunityStats/>
      
      
@@ -102,9 +103,9 @@ export default function Home() {
     <Journey />
       
 
-     <Reviews/>
+     <TestimonialSection/>
       <ContactSection />
-      <FAQSection />
+      {/* <FAQSection /> */}
      
      
       {/* <CommunitySection/> */}

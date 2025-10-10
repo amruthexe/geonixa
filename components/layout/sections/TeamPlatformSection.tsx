@@ -55,7 +55,7 @@ export default function StudentPlatformSection() { // Renamed component for rele
   return (
     <section className="py-16 px-4 sm:px-8 lg:px-16 bg-white">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#eb4917] ">
+        <h2 className="text-3xl md:text-4xl text-[#eb4917] text-center font-bold mb-4">
           One platform for your education and career 🎓
         </h2>
       </div>

@@ -35,7 +35,7 @@ export default function UpskillSection() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
           <span className="bg-[#eb4917] rounded-md px-2">Upskill</span> with Geonixa 
 
-          <br className="hidden sm:block" /> Stay ahead with trending skills.
+          <br className="hidden sm:block" /> Stay ahead with Trending skills.
 
        
         </h1>

@@ -27,7 +27,7 @@ const Reviews = () => {
                 <ReviewCard key={review.username} {...review} />
               ))}
             </Marquee>
-            <Marquee pauseOnHover reverse className="[--duration:30s]">
+            <Marquee  className="[--duration:30s]">
               {secondRow.map((review) => (
                 <ReviewCard key={review.username} {...review} />
               ))}
