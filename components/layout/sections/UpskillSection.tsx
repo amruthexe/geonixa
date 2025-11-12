@@ -6,30 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function UpskillSection() {
   return (
     <section className="relative flex flex-col items-center justify-center text-center overflow-hidden bg-white py-24 md:py-32">
-      {/* Decorative lines (left) */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 hidden md:block">
-        <div className="flex flex-col gap-10">
-          {[...Array(4)].map((_, i) => (
-            <div
-              key={i}
-              className="h-[10px] w-80 rounded-r-md bg-[#eb4917] transform rotate-[-5deg]"
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Decorative lines (right) */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block">
-        <div className="flex flex-col gap-10">
-          {[...Array(4)].map((_, i) => (
-            <div
-              key={i}
-              className="h-[10px] w-80 bg-[#eb4917] rounded-l-md transform rotate-[5deg]"
-            />
-          ))}
-        </div>
-      </div>
-
+    
       {/* Content */}
       <div className="max-w-3xl mx-auto px-8">
  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-relaxed text-gray-900 mb-4">
