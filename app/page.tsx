@@ -33,6 +33,7 @@ import SuccessStories from "@/components/layout/sections/SuccessStories";
 import GeonixaBottom from "@/components/layout/sections/GeonixaBottom";
 import { CommunitySection } from "@/components/layout/sections/community";
 import { TestimonialSection } from "@/components/layout/sections/testimonial";
+import UpskillSectionDev from "@/components/layout/sections/UpskillSectionDev";
 export const metadata = {
   title: "GeoNixa | Online Learning Platform for Skill Development",
   description:
@@ -76,6 +77,7 @@ export default function Home() {
                 <Programs/>
                 <VerticalsSection/>
                <ProgrammingGlobeSection/>
+            
                
                
                
@@ -102,7 +104,7 @@ export default function Home() {
    
     <Journey />
       
-
+   <UpskillSectionDev/>
      <TestimonialSection/>
       <ContactSection />
       {/* <FAQSection /> */}
