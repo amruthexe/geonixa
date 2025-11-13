@@ -19,7 +19,7 @@ const page = () => {
        {/* <STAADPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

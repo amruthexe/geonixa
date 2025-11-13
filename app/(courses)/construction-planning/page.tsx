@@ -23,7 +23,7 @@ const page = () => {
        {/* <ConstructionPlanningPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

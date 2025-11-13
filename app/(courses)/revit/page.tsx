@@ -19,7 +19,7 @@ const page = () => {
        {/* <RevitPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

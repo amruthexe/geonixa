@@ -32,7 +32,7 @@ export default function WebDevCourse(): JSX.Element {
           </h2>
           
           <p className="mt-5 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">
-            From College Student &rarr; **Job-Ready Developer in 6 Months**
+            From College Student &rarr; Job-Ready Developer in 6 Months
           </p>
 
           <div className="mx-auto mt-6 w-16 h-1.5 bg-orange-400 rounded-full"></div>
@@ -83,7 +83,8 @@ export default function WebDevCourse(): JSX.Element {
           >
             <div>
               <p className="text-xl text-gray-900 font-extrabold">5-Month Full-Stack Program</p>
-              <p className="text-sm text-gray-600 mt-1">**100% Job Guarantee** | Project-Based Learning | Limited Seats</p>
+              <p className="text-sm text-gray-600 mt-1">
+                100% Job Guarantee | Project-Based Learning | Limited Seats</p>
             </div>
 
             <div className="flex items-center gap-4 flex-shrink-0">

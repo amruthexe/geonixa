@@ -21,7 +21,7 @@ const page = () => {
        <PythonProgrammingPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

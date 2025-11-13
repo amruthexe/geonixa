@@ -19,7 +19,7 @@ const page = () => {
        {/* <BlockchainDevelopmentPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

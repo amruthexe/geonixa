@@ -19,7 +19,7 @@ const page = () => {
        {/* <BIMPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

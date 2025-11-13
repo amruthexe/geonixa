@@ -99,11 +99,12 @@ const serviceList: ServiceProps[] = [
 
 const programList: ServiceProps[] = [
   { title: "All programs", href: "/programs", icon: GraduationCap },
-  { title: "Full-Stack Web Development (MERN)", href: "/programs/fast-track", icon: BriefcaseBusiness },
-  { title: "Digital Marketing & Growth Strategy", href: "/programs/career-pro", icon: BriefcaseBusiness },
+    { title: "2 Months Course", href: "/programs/pro-edge", icon: GraduationCap },
+  { title: "Full-Stack Web Development (MERN)", href: "/programs/skill-boost", icon: BriefcaseBusiness },
+  { title: "Digital Marketing & Growth Strategy", href: "/programs/campus-project-pro", icon: BriefcaseBusiness },
   { title: "Cross-Platform App Developer Program", href: "/programs/campus-code-start", icon: BriefcaseBusiness },
   { title: "Skill Boost 2", href: "/programs/skill-boost", icon: GraduationCap },
-  { title: "Pro Edge 3", href: "/programs/pro-edge", icon: GraduationCap },
+
   { title: "Dual Path 5", href: "/programs/dual-pack", icon: GraduationCap },
   { title: "Campus+ LearnTrack", href: "/programs/campus-plus", icon: GraduationCap },
   { title: "Campus+ ProjectPro", href: "/programs/campus-project-pro", icon: GraduationCap },

@@ -167,7 +167,7 @@ export default function WebDevFormulaOverview(): JSX.Element {
           >
               <p className="text-xl font-extrabold text-white flex items-center justify-center mb-4">
                   <span className="text-2xl mr-3 font-light">&rarr;</span>
-                  Build real projects &rarr; Build portfolio &rarr; **Get placed**
+                  Build real projects &rarr; Build portfolio &rarr; Get placed
               </p>
               <button className="px-8 py-3 bg-white text-orange-700 rounded-lg text-lg font-bold hover:bg-gray-100 transition duration-300">
                   Join the Next Batch

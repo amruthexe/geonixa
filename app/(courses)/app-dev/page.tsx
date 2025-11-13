@@ -25,7 +25,7 @@ const page = () => {
     
     <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     {/* <FAQSection/> */}
     <ContactSection/>
     <Footer/>

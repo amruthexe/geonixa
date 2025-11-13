@@ -22,7 +22,7 @@ const page = () => {
        {/* <JavaProgrammingPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

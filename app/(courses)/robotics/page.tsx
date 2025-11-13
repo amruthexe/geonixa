@@ -18,7 +18,7 @@ const page = () => {
        {/* <RoboticsPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>

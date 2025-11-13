@@ -21,7 +21,7 @@ const page = () => {
         {/* <DataSciencePricingSection/> */}
           <Reviews/>
             <Collaborations/>
-            <GetCertified/>
+          
             {/* <FAQSection/> */}
             <ContactSection/>
             <Footer/>

@@ -22,7 +22,7 @@ const page = () => {
        {/* <HRPricingSection/> */}
        <Reviews/>
     <Collaborations/>
-    <GetCertified/>
+    
     <FAQSection/>
     <ContactSection/>
     <Footer/>
