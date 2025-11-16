@@ -61,7 +61,7 @@ export default function ProgramPromo() {
               className="w-5/6 sm:w-1/3 font-bold group/arrow bg-black hover:bg-gray-800 text-white rounded-full px-24 py-3 transition duration-300"
             >
               <Link href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20learning%20about%20your%20Fast%20Track%2045%20course.">
-                Start Learning at ₹2499
+                Start Learning at ₹6999
               </Link>
             </Button>
 

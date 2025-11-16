@@ -5,110 +5,110 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 const courses = [
-  {
-    "title": "Python Programming",
-    "subtitle": "Course on Python Programming",
-    "duration": "2–3 Months",
-    "image": "/course/python.png",
-    "slug": "python"
+ {
+    title: "Python Programming",
+    subtitle: "Course on Python Programming",
+    duration: "2–3 Months",
+    image: "/new/6.png",
+    slug: "python",
   },
   {
-    "title": "Data Science",
-    "subtitle": "Course on Data Science",
-    "duration": "2–3 Months",
-    "image": "/course/ds.png",
-    "slug": "data-science"
+    title: "Data Science",
+    subtitle: "Course on Data Science",
+    duration: "2–3 Months",
+    image: "/new/5.png",
+    slug: "data-science",
   },
   {
-    "title": "Full Stack Web Development",
-    "subtitle": "Course on Full Stack Web Development",
-    "duration": "2–3 Months",
-    "image": "/course/fs.png",
-    "slug": "full-stack"
+    title: "Full Stack Web Development",
+    subtitle: "Course on Full Stack Web Development",
+    duration: "2–3 Months",
+    image: "/new/7.png",
+    slug: "full-stack",
   },
   {
-    "title": "Java Programming",
-    "subtitle": "Course on Java Programming",
-    "duration": "2–3 Months",
-    "image": "/course/java.png",
-    "slug": "java"
+    title: "Java Programming",
+    subtitle: "Course on Java Programming",
+    duration: "2–3 Months",
+    image: "/new/8.png",
+    slug: "java",
   },
   {
-    "title": "Android App Development",
-    "subtitle": "Course on Android App Development",
-    "duration": "2–3 Months",
-    "image": "/course/andriod.png",
-    "slug": "app-dev"
+    title: "Android App Development",
+    subtitle: "Course on Android App Development",
+    duration: "2–3 Months",
+    image: "/new/1.png",
+    slug: "app-dev",
   },
   {
-    "title": "Machine Learning with Python",
-    "subtitle": "Course on Machine Learning with Python",
-    "duration": "2–3 Months",
-    "image": "/course/ml.png",
-    "slug": "ml"
+    title: "Machine Learning with Python",
+    subtitle: "Course on Machine Learning with Python",
+    duration: "2–3 Months",
+    image: "/new/9.png",
+    slug: "ml",
   },
   {
-    "title": "Artificial Intelligence",
-    "subtitle": "Course on Artificial Intelligence",
-    "duration": "2–3 Months",
-    "image": "/course/ai.png",
-    "slug": "ai"
+    title: "Artificial Intelligence",
+    subtitle: "Course on Artificial Intelligence",
+    duration: "2–3 Months",
+    image: "/new/10.png",
+    slug: "ai",
   },
   {
-    "title": "Cybersecurity",
-    "subtitle": "Course on Cybersecurity",
-    "duration": "2–3 Months",
-    "image": "/course/cyber.png",
-    "slug": "cyber-security"
+    title: "Cybersecurity",
+    subtitle: "Course on Cybersecurity",
+    duration: "2–3 Months",
+    image: "/new/4.png",
+    slug: "cyber-security",
   },
   {
-    "title": "Cloud Computing",
-    "subtitle": "Course on Cloud Computing",
-    "duration": "2–3 Months",
-    "image": "/course/cloud.png",
-    "slug": "cloud-comp"
+    title: "Cloud Computing",
+    subtitle: "Course on Cloud Computing",
+    duration: "2–3 Months",
+    image: "/new/11.png",
+    slug: "cloud",
   },
   {
-    "title": "DevOps",
-    "subtitle": "Course on DevOps",
-    "duration": "2–3 Months",
-    "image": "/course/devops.png",
-    "slug": "devops"
+    title: "DevOps",
+    subtitle: "Course on DevOps",
+    duration: "2–3 Months",
+    image: "/new/12.png",
+    slug: "devops",
   },
   {
-    "title": "Blockchain Development",
-    "subtitle": "Course on Blockchain Development",
-    "duration": "2–3 Months",
-    "image": "/course/block.png",
-    "slug": "block-chain"
+    title: "Blockchain Development",
+    subtitle: "Course on Blockchain Development",
+    duration: "2–3 Months",
+    image: "/new/13.png",
+    slug: "block-chain",
   },
   {
-    "title": "Data Analytics",
-    "subtitle": "Course on Data Analytics",
-    "duration": "2–3 Months",
-    "image": "/course/da.png",
-    "slug": "business-analytics"
+    title: "Data Analytics",
+    subtitle: "Course on Data Analytics",
+    duration: "2–3 Months",
+    image: "/new/14.png",
+    slug: "business-analytics",
   },
   {
-    "title": "UI/UX",
-    "subtitle": "Course on UI/UX",
-    "duration": "2–3 Months",
-    "image": "/course/ui-ux.png",
-    "slug": "ui-ux"
+    title: "UI/UX",
+    subtitle: "Course on UI/UX",
+    duration: "2–3 Months",
+    image: "/new/15.png",
+    slug: "ui-ux",
   },
   {
-    "title": "SQL",
-    "subtitle": "Course on SQL",
-    "duration": "2–3 Months",
-    "image": "/course/sql.png",
-    "slug": "sql"
+    title: "SQL",
+    subtitle: "Course on SQL",
+    duration: "2–3 Months",
+    image: "/new/16.png",
+    slug: "sql",
   },
   {
-    "title": "Graphic Design",
-    "subtitle": "Course on Graphic Design",
-    "duration": "2–3 Months",
-    "image": "/course/gd.png",
-    "slug": "graphic-design"
+    title: "Graphic Design",
+    subtitle: "Course on Graphic Design",
+    duration: "2–3 Months",
+    image: "/new/17.png",
+    slug: "graphic-design",
   },]
 
   

@@ -7,46 +7,46 @@ import Link from 'next/link';
 
 const Courses =[
   {
-    "title": "Embedded Systems",
-    "subtitle": "Design and development of embedded systems.",
-    "duration": "3\u20134 Months",
-    "image": "/course/embed.png",
-    "slug": "embed"
+    title: "Embedded Systems",
+    subtitle: "Course on Embedded Systems",
+    duration: "2–3 Months",
+    image: "/new/29.png",
+    slug: "embed",
   },
   {
-    "title": "VLSI",
-    "subtitle": "Very Large Scale Integration for circuit design.",
-    "duration": "4\u20135 Months",
-    "image": "/course/vlsi.png",
-    "slug": "vlsi"
+    title: "VLSI",
+    subtitle: "Course on VLSI",
+    duration: "2–3 Months",
+    image: "/new/30.png",
+    slug: "vlsi",
   },
   {
-    "title": "MATLAB",
-    "subtitle": "MATLAB for simulation and data analysis.",
-    "duration": "2\u20133 Months",
-    "image": "/course/mathlab.png",
-    "slug": "matlab"
+    title: "MATLAB",
+    subtitle: "Course on MATLAB",
+    duration: "2–3 Months",
+    image: "/new/31.png",
+    slug: "matlab",
   },
   {
-    "title": "Internet of Things (IoT)",
-    "subtitle": "Building IoT devices and systems.",
-    "duration": "3 Months",
-    "image": "/course/iot.png",
-    "slug": "iot"
+    title: "Internet of Things (IoT)",
+    subtitle: "Course on Internet of Things (IoT)",
+    duration: "2–3 Months",
+    image: "/new/32.png",
+    slug: "iot",
   },
   {
-    "title": "Robotics",
-    "subtitle": "Robot design, programming, and control systems.",
-    "duration": "4\u20135 Months",
-    "image": "/course/robo.png",
-    "slug": "robotics"
+    title: "Robotics",
+    subtitle: "Course on Robotics",
+    duration: "2–3 Months",
+    image: "/new/33.png",
+    slug: "robotics",
   },
   {
-    "title": "Hybrid Electric Vehicles",
-    "subtitle": "Learn the design and control of hybrid electric vehicles.",
-    "duration": "4\u20135 Months",
-    "image": "/course/hybird.png",
-    "slug": "hybird"
+    title: "Hybrid Electric Vehicles",
+    subtitle: "Course on Hybrid Electric Vehicles",
+    duration: "2–3 Months",
+    image: "/new/34.png",
+    slug: "hybird",
   }
 ]
 export default function EeCourseGrid() {

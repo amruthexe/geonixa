@@ -6,62 +6,55 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Courses = [
-  {
-    "title": "Business Analytics",
-    "subtitle": "Learn how to make data-driven business decisions.",
-    "duration": "3\u20134 Months",
-    "image": "/course/ba.png",
-    "slug": "business-analytics"
+ {
+    title: "Business Analytics",
+    subtitle: "Course on Business Analytics",
+    duration: "2–3 Months",
+    image: "/new/20.png",
+    slug: "business-analytics-2",
   },
   {
-    "title": "Data Visualization using Power BI / Tableau",
-    "subtitle": "Master tools for data visualization and storytelling.",
-    "duration": "2\u20133 Months",
-    "image": "/course/data-vis.png",
-    "slug": "data-visualization"
+    title: "Data Visualization using Power BI / Tableau",
+    subtitle: "Course on Data Visualization using Power BI / Tableau",
+    duration: "2–3 Months",
+    image: "/new/21.png",
+    slug: "data-visualization",
   },
   {
-    "title": "Digital Marketing",
-    "subtitle": "Learn SEO, SEM, SMM, Email Marketing, and Content Marketing.",
-    "duration": "3\u20134 Months",
-    "image": "/course/dm.png",
-    "slug": "digital-marketing"
+    title: "Digital Marketing",
+    subtitle: "Course on Digital Marketing",
+    duration: "2–3 Months",
+    image: "/new/22.png",
+    slug: "digital-marketing",
   },
   {
-    "title": "Finance",
-    "subtitle": "Understand financial analysis, forecasting, and investments.",
-    "duration": "2\u20133 Months",
-    "image": "/course/finance.png",
-    "slug": "finance"
+    title: "Finance",
+    subtitle: "Course on Finance",
+    duration: "2–3 Months",
+    image: "/new/23.png",
+    slug: "finance",
   },
   {
-    "title": "HR (Human Resources)",
-    "subtitle": "Learn the essentials of human resource management.",
-    "duration": "3 Months",
-    "image": "/course/hr.png",
-    "slug": "hr"
+    title: "Project Management",
+    subtitle: "Course on Project Management",
+    duration: "2–3 Months",
+    image: "/new/25.png",
+    slug: "poject-man",
   },
   {
-    "title": "Project Management",
-    "subtitle": "Learn project planning, execution, and management.",
-    "duration": "3\u20134 Months",
-    "image": "/course/project.png",
-    "slug": "poject-man"
+    title: "Canva & Graphic Design for Marketing",
+    subtitle: "Course on Canva & Graphic Design for Marketing",
+    duration: "2–3 Months",
+    image: "/new/26.png",
+    slug: "graphic-design-marketing",
   },
   {
-    "title": "Canva & Graphic Design for Marketing",
-    "subtitle": "Master Canva to create visually appealing marketing assets.",
-    "duration": "2\u20133 Months",
-    "image": "/course/canva.png",
-    "slug": "graphic-design"
+    title: "Stock Market",
+    subtitle: "Course on Stock Market",
+    duration: "2–3 Months",
+    image: "/new/27.png",
+    slug: "stock",
   },
-  {
-    "title": "Stock Market",
-    "subtitle": "Learn stock trading, analysis, and portfolio management.",
-    "duration": "3 Months",
-    "image": "/course/stock.png",
-    "slug": "stock"
-  }
 ]
 
 export default function MaCourseGrid() {

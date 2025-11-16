@@ -7,61 +7,54 @@ import Link from 'next/link';
 
 const Courses = [
   {
-    "title": "AutoCAD & SolidWorks",
-    "subtitle": "Learn CAD software for 2D and 3D design modeling.",
-    "duration": "3\u20134 Months",
-    "image": "/course/auto.png",
-    "slug": "auto-cad"
+    title: "AutoCAD & SolidWorks",
+    subtitle: "Course on AutoCAD & SolidWorks",
+    duration: "2–3 Months",
+    image: "/new/36.png",
+    slug: "auto-cad",
   },
   {
-    "title": "ANSYS for FEA & CFD",
-    "subtitle": "Master FEA (Finite Element Analysis) and CFD (Computational Fluid Dynamics).",
-    "duration": "4\u20135 Months",
-    "image": "/course/anasys.png",
-    "slug": "ansys"
+    title: "ANSYS for FEA & CFD",
+    subtitle: "Course on ANSYS for FEA & CFD",
+    duration: "2–3 Months",
+    image: "/new/37.png",
+    slug: "ansys",
   },
   {
-    "title": "3D Printing",
-    "subtitle": "Learn to design and print 3D models using modern 3D printing technology.",
-    "duration": "2\u20133 Months",
-    "image": "/course/3d.png",
-    "slug": "three-d"
+    title: "3D Printing",
+    subtitle: "Course on 3D Printing",
+    duration: "2–3 Months",
+    image: "/new/38.png",
+    slug: "3d",
   },
   {
-    "title": "CNC Programming",
-    "subtitle": "Programming CNC machines for precise engineering and manufacturing.",
-    "duration": "3 Months",
-    "image": "/course/cnc.png",
-    "slug": "cnc"
+    title: "STAAD Pro",
+    subtitle: "Course on STAAD Pro",
+    duration: "2–3 Months",
+    image: "/new/40.png",
+    slug: "staad",
   },
   {
-    "title": "STAAD Pro",
-    "subtitle": "Learn structural analysis and design using STAAD Pro software.",
-    "duration": "3\u20134 Months",
-    "image": "/course/staad.png",
-    "slug": "staad"
+    title: "Revit Architecture",
+    subtitle: "Course on Revit Architecture",
+    duration: "2–3 Months",
+    image: "/new/41.png",
+    slug: "revit",
   },
   {
-    "title": "Revit Architecture",
-    "subtitle": "Master building information modeling (BIM) with Revit for architecture.",
-    "duration": "4\u20135 Months",
-    "image": "/course/revit.png",
-    "slug": "revit"
+    title: "BIM (Building Information Modelling)",
+    subtitle: "Course on BIM (Building Information Modelling)",
+    duration: "2–3 Months",
+    image: "/new/42.png",
+    slug: "bim",
   },
   {
-    "title": "BIM (Building Information Modelling)",
-    "subtitle": "Learn the fundamentals of BIM for managing building projects.",
-    "duration": "4 Months",
-    "image": "/course/bim.png",
-    "slug": "bim"
+    title: "Construction Planning",
+    subtitle: "Course on Construction Planning",
+    duration: "2–3 Months",
+    image: "/new/43.png",
+    slug: "construction-planning",
   },
-  {
-    "title": "Construction Planning",
-    "subtitle": "Learn how to plan and manage construction projects effectively.",
-    "duration": "3 Months",
-    "image": "/course/c-planing.png",
-    "slug": "construction-planning"
-  }
 ]
 
 export default function MechCivilCourseGrid() {

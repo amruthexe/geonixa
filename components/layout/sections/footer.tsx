@@ -62,7 +62,7 @@ const Footer = () => {
               <h4 className="text-sm font-medium">Company</h4>
               <ul className="space-y-4 w-full">
                 {routeList.map((route, index) => (
-                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
+                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={route.href} className="w-full">{route.label}</Link>
                   </li>
                 ))}
@@ -73,7 +73,7 @@ const Footer = () => {
               <h4 className="text-sm font-medium]">Services</h4>
               <ul className="space-y-4 w-full">
                 {serviceList.map((service, index) => (
-                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
+                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={service.href} className="w-full">{service.title}</Link>
                   </li>
                 ))}
@@ -84,7 +84,7 @@ const Footer = () => {
               <h4 className="text-sm font-medium]">Programs</h4>
               <ul className="space-y-4 w-full">
                 {programList.map((program, index) => (
-                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
+                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={program.href} className="w-full">{program.title}</Link>
                   </li>
                 ))}
@@ -95,7 +95,7 @@ const Footer = () => {
               <h4 className="text-sm font-medium]">Other</h4>
               <ul className="space-y-4 w-full">
                 {routeLists.map((route, index) => (
-                  <li key={index} className="text-sm text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
+                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
                     <Link href={route.href} className="w-full">{route.label}</Link>
                   </li>
                 ))}
