@@ -169,121 +169,121 @@ export const Navbar = () => {
       </Link>
 
       {/* ✅ Mobile Navbar (unchanged for this request) */}
-      <div className="flex items-center lg:hidden">
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild>
-            <Menu onClick={() => setIsOpen(!isOpen)} className="cursor-pointer lg:hidden w-6 h-6 text-gray-700" />
-          </SheetTrigger>
+     <div className="flex items-center lg:hidden">
+  <Sheet open={isOpen} onOpenChange={setIsOpen}>
+    <SheetTrigger asChild>
+      <Menu onClick={() => setIsOpen(!isOpen)} className="cursor-pointer lg:hidden w-6 h-6 text-gray-700" />
+    </SheetTrigger>
 
-          <SheetContent
-            side="right" // Changed side to right for a modern feel
-            className="flex flex-col justify-between rounded-none bg-card border-secondary max-w-sm w-full"
-          >
-            <div>
-              <SheetHeader className="mb-6 border-b pb-4">
-                <SheetTitle className="flex items-center">
-                  <Image
-                    src="/geonixa.png"
-                    alt="Geo Nixa Logo"
-                    width={40}
-                    height={40}
-                    className="rounded-md mr-2"
-                  />
-                  <Link href="/" className="flex items-center">
-                    <span className="text-xl pb-1 font-extrabold tracking-wide text-[#eb4917]">
-                      Geo <span className="text-gray-700">Nixa</span>
-                    </span>
+    <SheetContent
+      side="right" // Changed side to right for a modern feel
+      className="flex flex-col justify-between rounded-none bg-card border-secondary max-w-sm w-full"
+    >
+      <div>
+        <SheetHeader className="mb-6 border-b pb-4">
+          <SheetTitle className="flex items-center">
+            <Image
+              src="/geonixa.png"
+              alt="Geo Nixa Logo"
+              width={40}
+              height={40}
+              className="rounded-md mr-2"
+            />
+            <Link href="/" className="flex items-center">
+              <span className="text-xl pb-1 font-extrabold tracking-wide text-[#eb4917]">
+                Geo <span className="text-gray-700">Nixa</span>
+              </span>
+            </Link>
+          </SheetTitle>
+        </SheetHeader>
+
+        {/* Mobile Accordion Menu */}
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="services">
+            <AccordionTrigger className="px-4 py-3 text-lg font-semibold text-gray-700 hover:no-underline">
+              Courses
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pl-4">
+              {serviceList.map(({ title, href, icon: Icon }) => (
+                <Button
+                  key={title}
+                  onClick={() => setIsOpen(false)}
+                  asChild
+                  variant="ghost"
+                  className="justify-start text-base font-medium rounded-lg hover:bg-orange-50/50"
+                >
+                  <Link href={href} className="flex items-center gap-3">
+                    {/* Increased Mobile Icon Size */}
+                    <Icon className="w-5 h-5 text-[#eb4917] opacity-80" /> {title}
                   </Link>
-                </SheetTitle>
-              </SheetHeader>
+                </Button>
+              ))}
+            </AccordionContent>
+          </AccordionItem>
 
-              {/* Mobile Accordion Menu */}
-              <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="services">
-                  <AccordionTrigger className="px-4 py-3 text-lg font-semibold text-gray-700 hover:no-underline">
-                    Courses
-                  </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pl-4">
-                    {serviceList.map(({ title, href, icon: Icon }) => (
-                      <Button
-                        key={title}
-                        onClick={() => setIsOpen(false)}
-                        asChild
-                        variant="ghost"
-                        className="justify-start text-base font-medium rounded-lg hover:bg-orange-50/50"
-                      >
-                        <Link href={href} className="flex items-center gap-3">
-                          {/* Increased Mobile Icon Size */}
-                          <Icon className="w-5 h-5 text-[#eb4917] opacity-80" /> {title}
-                        </Link>
-                      </Button>
-                    ))}
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="programs">
-                  <AccordionTrigger className="px-4 py-3 text-lg font-semibold text-gray-700 hover:no-underline">
-                    Programs
-                  </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pl-4">
-                    <ul className="flex flex-col gap-1">
-                      {programList.map(({ title, href, icon: Icon }) => (
-                        <li key={title}>
-                          <Link href={href} className="group flex justify-between items-center p-3 rounded-lg text-sm font-medium text-foreground hover:bg-orange-50/50 transition-colors" onClick={() => setIsOpen(false)}>
-                            <span className="flex items-center gap-3">
-                              {/* Increased Mobile Icon Size */}
-                              <Icon className="w-5 h-5 text-[#eb4917] opacity-80" />
-                              {title}
-                            </span>
-                            <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-
-
-              <div className="flex flex-col font-medium gap-1 mt-6 border-t pt-4">
-                {routeList.map(({ href, label }) => (
-                  <Button
-                    key={href}
-                    onClick={() => setIsOpen(false)}
-                    asChild
-                    variant="ghost"
-                    className="justify-start font-medium text-base text-gray-700 hover:bg-orange-50/50"
-                  >
-                    <Link href={href}>{label}</Link>
-                  </Button>
+          <AccordionItem value="programs">
+            <AccordionTrigger className="px-4 py-3 text-lg font-semibold text-gray-700 hover:no-underline">
+              Programs
+            </AccordionTrigger>
+            <AccordionContent className="flex flex-col gap-2 max-h-[60vh] overflow-y-auto pl-4">
+              <ul className="flex flex-col gap-1">
+                {programList.map(({ title, href, icon: Icon }) => (
+                  <li key={title}>
+                    <Link href={href} className="group flex justify-between items-center p-3 rounded-lg text-sm font-medium text-foreground hover:bg-orange-50/50 transition-colors" onClick={() => setIsOpen(false)}>
+                      <span className="flex items-center gap-3">
+                        {/* Increased Mobile Icon Size */}
+                        <Icon className="w-5 h-5 text-[#eb4917] opacity-80" />
+                        {title}
+                      </span>
+                      <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </Link>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
 
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start pt-4">
-              <div className="flex w-full space-x-2">
-                 <Button asChild className="flex-1 font-bold bg-[#eb4917] hover:bg-opacity-90 group/arrow">
-                    <Link
-                      href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
-                      target="_blank"
-                    >
-                      Book a Demo
-                      <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-                    </Link>
-                  </Button>
-                  <Button asChild size="icon" variant="outline" className="text-green-500 border-green-500 hover:text-white hover:bg-green-500">
-                    <Link
-                      href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
-                      target="_blank"
-                    >
-                      <FaWhatsapp className="size-5" />
-                    </Link>
-                  </Button>
-              </div>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet>
+        <div className="flex flex-col font-medium gap-1 mt-6 border-t pt-4">
+          {routeList.map(({ href, label }) => (
+            <Button
+              key={href}
+              onClick={() => setIsOpen(false)}
+              asChild
+              variant="ghost"
+              className="justify-start font-medium text-base text-gray-700 hover:bg-orange-50/50"
+            >
+              <Link href={href}>{label}</Link>
+            </Button>
+          ))}
+        </div>
       </div>
+
+      <SheetFooter className="flex-col sm:flex-col justify-start items-start pt-4">
+        <div className="flex w-full space-x-2">
+           <Button asChild className="flex-1 font-bold bg-[#eb4917] hover:bg-opacity-90 group/arrow">
+              <Link
+                href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+                target="_blank"
+              >
+                Book a Demo
+                <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+            <Button asChild size="icon" variant="outline" className="text-green-500 border-green-500 hover:text-white hover:bg-green-500">
+              <Link
+                href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+                target="_blank"
+              >
+                <FaWhatsapp className="size-5" />
+              </Link>
+            </Button>
+        </div>
+      </SheetFooter>
+    </SheetContent>
+  </Sheet>
+</div>
+
 
       {/* ✅ Desktop Navigation */}
       <NavigationMenu className="hidden lg:block">
