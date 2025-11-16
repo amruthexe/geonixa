@@ -51,7 +51,7 @@ export default function WebDevPromo() {
               className="w-5/6 sm:w-1/3 font-bold group/arrow bg-black hover:bg-gray-800 text-white rounded-full px-24 py-3 transition duration-300"
             >
               <Link href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20learning%20about%20your%20Web%20Development%20course.">
-                Start Learning at ₹4999
+                Start Learning at ₹6999
                 <Play className="size-4 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>
             </Button>

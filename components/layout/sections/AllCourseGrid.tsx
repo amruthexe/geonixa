@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+// Assuming the path to your Shadcn Button component is correct
+import { Button } from "@/components/ui/button"; 
 
+// --- COURSE DATA ---
 const courses = [
   {
     title: "Python Programming",
@@ -259,123 +261,106 @@ const courses = [
     slug: "hr",
   },
 ];
+// -------------------
 
-// Framer Motion variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-      when: "beforeChildren",
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30, scale: 0.98 },
-  show: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.4, ease: "easeOut" },
-  },
-};
-
-export default function AllCourseGrid() {
+/**
+ * Renders a grid of all available courses using Framer Motion for animation.
+ */
+export default function AllCourseGrid() { // Removed the redundant 'courses: any' parameter
   return (
-    <section className="py-12 bg-white">
-      <div className="container relative">
-        {/* Heading */}
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center text-orange-600"
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          Explore Our All Courses
-        </motion.h2>
-
-        {/* Subheading */}
-        <motion.p
-          className="text-center text-gray-600 mt-2 text-sm"
-          initial={{ opacity: 0, y: 8 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.45, delay: 0.05 }}
-        >
+    <section className="py-8 bg-background dark:bg-black">
+      <div className="container relative mx-auto px-4">
+        {/* Title and Subtitle */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          Explore Our All courses
+        </h2>
+        <p className="text-center text-muted-foreground mt-2 text-sm">
           Skill up with global mentors and hands-on projects.
-        </motion.p>
+        </p>
 
         {/* Course Grid */}
-        <motion.div
-          className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.15 }}
-        >
-          {courses.map((course) => (
-            <motion.article
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {courses.map((course) => ( // Removed ': any' from map callback
+            <motion.div
               key={course.slug}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.99 }}
-              className="bg-white border border-orange-200 rounded-2xl shadow-md p-4 flex flex-col hover:shadow-lg transition"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="bg-card dark:bg-muted/40 border rounded-2xl shadow-sm p-4 flex flex-col justify-between"
             >
-              {/* Image with subtle entrance */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.4 }}
-                className="rounded-md overflow-hidden"
-              >
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  width={400}
-                  height={400}
-                  className="rounded-md object-cover w-full h-[180px]"
-                />
-              </motion.div>
+              {/* Course Image */}
+              <Image
+                src={course.image}
+                alt={course.title}
+                width={400}
+                height={400}
+                className="rounded-md object-cover w-full h-[180px]"
+                priority // Good practice for above-the-fold images
+              />
 
-              <div className="mt-4 flex-1">
-                
-
-                <h3 className="text-lg font-semibold mt-1 mb-2 text-gray-900">
+              {/* Course Details */}
+              <div className="mt-4 flex-grow">
+                <h4 className="text-muted-foreground text-sm font-medium">
+                  Explore Our Courses
+                </h4>
+                <h3 className="text-lg font-semibold mt-1 mb-2">
                   {course.title}
                 </h3>
+                <p className="text-sm text-black dark:text-blue-400">
+                  {course.subtitle}
+                </p>
 
-                <p className="text-sm text-gray-700">{course.subtitle}</p>
-
-                <div className="flex items-center justify-between text-sm text-gray-600 mt-4">
+                {/* Meta Info: Certification & Duration */}
+                <div className="flex items-center justify-between text-sm text-muted-foreground mt-4">
                   <span className="flex items-center gap-1">
-                    <span className="w-4 h-4 bg-orange-500 rounded-full" />
+                    {/* Replaced empty span with a Certification icon */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-4 h-4"
+                    >
+                      <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z" />
+                      <path d="M12 16a4 4 0 0 0 4-4v-1.5a4.5 4.5 0 0 0-9 0V12a4 4 0 0 0 4 4Z" />
+                    </svg>
                     Certification
                   </span>
-
                   <span className="flex items-center gap-1">
-                   
+                    {/* Replaced empty span with a Clock/Duration icon */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-4 h-4"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
                     {course.duration}
                   </span>
                 </div>
               </div>
 
+              {/* View Program Button */}
               <div className="mt-4 flex justify-center">
-                <Link href={`/${course.slug}`} className="w-full">
-                  <Button
-                    variant="outline"
-                    className="w-full border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white transition"
-                  >
+                {/* Added passHref and legacyBehavior for compatibility with custom components */}
+                <Link href={`/${course.slug}`} className="w-full" passHref legacyBehavior>
+                  <Button variant="outline" className="w-full">
                     View Program
                   </Button>
                 </Link>
               </div>
-            </motion.article>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
