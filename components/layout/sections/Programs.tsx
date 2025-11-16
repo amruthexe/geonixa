@@ -33,14 +33,14 @@ const programs = [
     title: "Cyber Security",
     subtitle: "Ethical Hacking + Threat Detection + Tools",
     duration: "3 Months",
-    image: "/course/cyber.png",
+    image: "/new/4.png",
     slug: "cyber-security",
   },
   {
     title: "Data Science",
     subtitle: "Python + ML + AI + Projects",
     duration: "3–4 Months",
-    image: "/course/ds.png",
+    image: "/new/5.png",
     slug: "data-science",
   },
 ];
