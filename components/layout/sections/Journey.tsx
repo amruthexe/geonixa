@@ -55,59 +55,64 @@ export default function Journey() {
         <div className="rounded-3xl bg-gradient-to-br from-orange-50 via-white to-orange-100 border border-orange-100 shadow-lg p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           
           {/* LEFT — Image display with thumbnails */}
-          <div
-            className="relative w-full flex flex-col items-center"
-            onMouseEnter={() => setPaused(true)}
-            onMouseLeave={() => setPaused(false)}
-          >
-            {/* layered card frames */}
-            <div className="relative w-full max-w-md md:max-w-lg">
-              <div className="absolute -left-4 -top-4 w-full h-full rounded-3xl bg-white/30 blur-sm" />
-              <div className="absolute -right-6 -bottom-6 w-full h-full rounded-3xl border border-orange-100" />
-              
-              <div className="relative rounded-3xl overflow-hidden shadow-xl">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={current}
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.6 }}
-                    className="relative w-full h-[320px] md:h-[420px]"
-                  >
-                    <Image
-                      src={images[current]}
-                      alt={steps[current].label}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover"
-                      priority={current === 0}
-                    />
-                    {/* subtle overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </div>
+         {/* LEFT — Image display with thumbnails */}
+<div
+  className="relative w-full flex flex-col items-center overflow-hidden"
+  onMouseEnter={() => setPaused(true)}
+  onMouseLeave={() => setPaused(false)}
+>
 
-            {/* thumbnails */}
-            <div className="mt-5 flex gap-3 items-center">
-              {images.map((img, idx) => (
-                <button
-                  key={img}
-                  onClick={() => goto(idx)}
-                  aria-label={`Show ${steps[idx].label}`}
-                  className={`w-14 h-10 rounded-xl overflow-hidden border transition-transform focus:outline-none ${
-                    idx === current
-                      ? "ring-2 ring-offset-2 ring-orange-300 transform scale-105"
-                      : "border-transparent hover:scale-105"
-                  }`}
-                >
-                  <Image src={img} alt={`thumb-${idx}`} width={80} height={60} className="object-cover" />
-                </button>
-              ))}
-            </div>
-          </div>
+  {/* layered frames — FIXED: removed negative positions */}
+  <div className="relative w-full max-w-md md:max-w-lg mx-auto">
+    <div className="absolute left-0 top-0 w-full h-full rounded-3xl bg-white/30 blur-sm" />
+    <div className="absolute right-0 bottom-0 w-full h-full rounded-3xl border border-orange-100" />
+
+    <div className="relative rounded-3xl overflow-hidden shadow-xl">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.98 }}
+          transition={{ duration: 0.6 }}
+          className="relative w-full h-[320px] md:h-[420px]"
+        >
+          <Image
+            src={images[current]}
+            alt={steps[current].label}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  </div>
+
+  {/* thumbnails — FIXED: wrap + prevent overflow */}
+  <div className="mt-5 flex gap-3 items-center flex-wrap justify-center w-full">
+    {images.map((img, idx) => (
+      <button
+        key={img}
+        onClick={() => goto(idx)}
+        aria-label={`Show ${steps[idx].label}`}
+        className={`w-14 h-10 rounded-xl overflow-hidden border transition-transform 
+          ${idx === current
+            ? "ring-2 ring-offset-2 ring-orange-300 scale-105"
+            : "border-transparent hover:scale-105"}`}
+      >
+        <Image
+          src={img}
+          alt={`thumb-${idx}`}
+          width={80}
+          height={60}
+          className="object-cover w-full h-full"
+        />
+      </button>
+    ))}
+  </div>
+</div>
 
           {/* RIGHT — Steps and progress */}
           <div className="w-full">
