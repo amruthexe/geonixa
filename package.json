@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@devnomic/marquee": "^1.0.2",
+    "@headlessui/react": "^2.2.9",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -52,7 +53,7 @@
     "@types/formidable": "^3.4.5",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.17",
-    "@types/react": "^18",
+    "@types/react": "^18.3.27",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",

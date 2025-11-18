@@ -16,7 +16,7 @@ const poppins = Poppins({
 export default function UpskillSectionDev() {
   return (
     <section
-      className={`${poppins.className} relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-100 py-20 md:py-32`}
+      className={`${poppins.className} relative overflow-hidden bg-white py-20 md:py-32`}
       aria-label="Upskill with Geonixa hero"
     >
       {/* Decorative shapes */}

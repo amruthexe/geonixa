@@ -1,9 +1,10 @@
-'use client'
+"use client";
 
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import Link from "next/link";
 import Container from "@/components/global/container";
 import Wrapper from "@/components/global/wrapper";
+import { Button } from "@/components/ui/button";
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaFacebookF, FaGithub } from "react-icons/fa";
 
 const routeList = [
@@ -18,119 +19,178 @@ const routeLists = [
 ];
 
 const serviceList = [
-  { title: "Web Development", href: "/web", icon: "Code" },
-  { title: "App Development", href: "/app-dev", icon: "Smartphone" },
-  { title: "Cloud Computing", href: "/cloud-comp", icon: "Cloud" },
-  { title: "Cyber Security", href: "/cyber-security", icon: "ShieldCheck" },
-  { title: "Data Science", href: "/data-science", icon: "Brain" },
-  { title: "Full Stack Web Dev", href: "/full-stack", icon: "Layers" },
-  { title: "Python Programming", href: "/python", icon: "FileCode" },
+  { title: "Web Development", href: "/web" },
+  { title: "App Development", href: "/app-dev" },
+  { title: "Cloud Computing", href: "/cloud-comp" },
+  { title: "Cyber Security", href: "/cyber-security" },
+  { title: "Data Science", href: "/data-science" },
+  { title: "Full Stack Web Dev", href: "/full-stack" },
+  { title: "Python Programming", href: "/python" },
 ];
 
 const programList = [
-  { title: "All programs", href: "/programs", icon: "GraduationCap" },
-  { title: "Fast Track 45", href: "/programs/fast-track", icon: "GraduationCap" },
-  { title: "Skill Boost 2", href: "/programs/skill-boost", icon: "GraduationCap" },
-  { title: "Pro Edge 3", href: "/programs/pro-edge", icon: "GraduationCap" },
-  { title: "Dual Path 5", href: "/programs/dual-pack", icon: "GraduationCap" },
-  { title: "Career Pro 6", href: "/programs/career-pro", icon: "GraduationCap" },
-  { title: "Campus+ LearnTrack", href: "/programs/campus-plus", icon: "GraduationCap" },
-  { title: "Campus+ ProjectPro", href: "/programs/campus-project-pro", icon: "GraduationCap" },
-  { title: "Campus+ CodeStart", href: "/programs/campus-code-start", icon: "GraduationCap" },
+  { title: "All programs", href: "/programs" },
+  { title: "Fast Track 45", href: "/programs/fast-track" },
+  { title: "Skill Boost 2", href: "/programs/skill-boost" },
+  { title: "Pro Edge 3", href: "/programs/pro-edge" },
+  { title: "Dual Path 5", href: "/programs/dual-pack" },
+  { title: "Career Pro 6", href: "/programs/career-pro" },
+  { title: "Campus+ LearnTrack", href: "/programs/campus-plus" },
+  { title: "Campus+ ProjectPro", href: "/programs/campus-project-pro" },
+  { title: "Campus+ CodeStart", href: "/programs/campus-code-start" },
 ];
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
+  const year = new Date().getFullYear();
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      return alert("Please enter a valid email.");
+    }
+    setLoading(true);
+    try {
+      // Attempt to post to your subscribe API (create /api/subscribe as needed)
+      await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      setSubscribed(true);
+      setEmail("");
+    } catch (err) {
+      // fallback UX — keep simple
+      console.error(err);
+      alert("Unable to subscribe right now. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <footer className="w-full py-10 relative bg-white border-t ">
+    <footer className="w-full bg-white border-t">
+      {/* Top area */}
       <Container>
-        <Wrapper className="relative flex flex-col md:flex-row justify-between pb-4 overflow-hidden footer">
-          <div className="flex flex-col items-start max-w-48">
+        <Wrapper className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          {/* Brand / CTA */}
+          <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold text-[#eb4917]">GeoNixa</span>
+              <span className="text-2xl font-extrabold text-[#eb4917]">GeoNixa</span>
             </div>
-            <p className="text-base text-[#eb4917]/90 max-w mt-4">
-              We are an edtech startup helping students excel in their careers.
+
+            <p className="text-sm text-[#eb4917]/90 max-w-[340px]">
+              We’re an edtech startup helping students learn practical skills, build
+              projects and launch careers — affordably and effectively.
             </p>
-            <Button className="mt-8 bg-[#eb4917] hover:bg-[#d73f10] text-white">
-              <Link href="/app">Start for free</Link>
-            </Button>
+
+            <div className="mt-2">
+              <Link href="/app" className="inline-block">
+                <Button className="bg-[#eb4917] hover:bg-[#d73f10] text-white rounded-full px-4 py-2">
+                  Start for free
+                </Button>
+              </Link>
+            </div>
+
+            {/* Socials */}
+            <div className="mt-4 flex items-center gap-3">
+              <Link href="https://www.linkedin.com/company/geonixa/" target="_blank" rel="noopener noreferrer" aria-label="GeoNixa on LinkedIn">
+                <FaLinkedin className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
+              </Link>
+              <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="GeoNixa on Instagram">
+                <FaInstagram className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
+              </Link>
+              <Link href="https://wa.me/919663216581" target="_blank" rel="noopener noreferrer" aria-label="GeoNixa on WhatsApp">
+                <FaWhatsapp className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
+              </Link>
+              <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="GeoNixa on Facebook">
+                <FaFacebookF className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
+              </Link>
+              <Link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GeoNixa on Github">
+                <FaGithub className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
+              </Link>
+            </div>
           </div>
 
-          {/* Route Links Section */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-lg mt-10 md:mt-0">
-            <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium">Company</h4>
-              <ul className="space-y-4 w-full">
-                {routeList.map((route, index) => (
-                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
-                    <Link href={route.href} className="w-full">{route.label}</Link>
+          {/* Links */}
+          <div className="grid grid-cols-2 gap-6 md:col-span-1 lg:col-span-1">
+            <div>
+              <h4 className="text-sm font-semibold mb-3">Company</h4>
+              <ul className="space-y-3 text-sm text-[#eb4917]/90">
+                {routeList.map((r) => (
+                  <li key={r.href}>
+                    <Link href={r.href} className="hover:text-[#eb4917] transition">
+                      {r.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium]">Services</h4>
-              <ul className="space-y-4 w-full">
-                {serviceList.map((service, index) => (
-                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
-                    <Link href={service.href} className="w-full">{service.title}</Link>
+            <div>
+              <h4 className="text-sm font-semibold mb-3">Support</h4>
+              <ul className="space-y-3 text-sm text-[#eb4917]/90">
+                {routeLists.map((r) => (
+                  <li key={r.href}>
+                    <Link href={r.href} className="hover:text-[#eb4917] transition">
+                      {r.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
+          </div>
 
-            <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium]">Programs</h4>
-              <ul className="space-y-4 w-full">
-                {programList.map((program, index) => (
-                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
-                    <Link href={program.href} className="w-full">{program.title}</Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Programs / newsletter */}
+          <div className="flex flex-col gap-4">
+            <h4 className="text-sm font-semibold">Programs</h4>
+            <div className="grid grid-cols-2 gap-2 text-sm text-[#eb4917]/90 max-h-40 overflow-auto pr-2">
+              {programList.map((p) => (
+                <Link key={p.href} href={p.href} className="hover:text-[#eb4917] transition text-left">
+                  {p.title}
+                </Link>
+              ))}
             </div>
 
-            <div className="flex flex-col gap-4">
-              <h4 className="text-sm font-medium]">Other</h4>
-              <ul className="space-y-4 w-full">
-                {routeLists.map((route, index) => (
-                  <li key={index} className="text-bold text-[#eb4917]/80 hover:text-[#eb4917] transition-all w-full">
-                    <Link href={route.href} className="w-full">{route.label}</Link>
-                  </li>
-                ))}
-              </ul>
+            {/* Subscribe */}
+            <div className="mt-4">
+              <label htmlFor="footer-email" className="text-sm font-medium block mb-2">Subscribe to updates</label>
+
+              <form onSubmit={handleSubscribe} className="flex gap-2 items-center">
+                <input
+                  id="footer-email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your email"
+                  className="flex-1 px-3 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#ffd7c0]"
+                  aria-label="Email address"
+                />
+                <Button type="submit" className="bg-[#eb4917] hover:bg-[#d73f10] text-white px-4 py-2" disabled={loading}>
+                  {loading ? "Joining..." : (subscribed ? "Joined" : "Join")}
+                </Button>
+              </form>
+
+              <p className="text-xs text-gray-500 mt-2">Get program updates, discounts and career tips.</p>
             </div>
           </div>
         </Wrapper>
       </Container>
 
-      {/* Bottom Socials */}
-      <Container>
-        <Wrapper className="pt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-center sm:text-left">
-          <p className="text-sm ">
-            &copy; {new Date().getFullYear()} GeoNixa. All rights reserved.
-          </p>
+      {/* Bottom area */}
+      <div className="border-t mt-6">
+        <Container>
+          <Wrapper className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-gray-600">&copy; {year} GeoNixa. All rights reserved.</p>
 
-          <div className="flex justify-center sm:justify-end items-center gap-4">
-            <Link href="https://www.linkedin.com/company/geonixa/" target="_blank" className="p-1">
-              <FaLinkedin className="w-5 h-5 hover:text-[#eb4917]" />
-            </Link>
-            <Link href="https://www.instagram.com" target="_blank" className="p-1">
-              <FaInstagram className="w-5 h-5 hover:text-[#eb4917]" />
-            </Link>
-            <Link href="https://wa.me/919663216581" target="_blank" className="p-1">
-              <FaWhatsapp className="w-5 h-5  hover:text-[#eb4917]" />
-            </Link>
-            <Link href="https://www.facebook.com" target="_blank" className="p-1">
-              <FaFacebookF className="w-5 h-5 hover:text-[#eb4917]" />
-            </Link>
-            <Link href="https://github.com" target="_blank" className="p-1">
-              <FaGithub className="w-5 h-5  hover:text-[#eb4917]" />
-            </Link>
-          </div>
-        </Wrapper>
-      </Container>
+            <div className="text-sm text-gray-600">
+              Built with ❤️ — <Link href="/terms" className="hover:text-[#eb4917]">Terms</Link> · <Link href="/privacy-policy" className="hover:text-[#eb4917]">Privacy</Link>
+            </div>
+          </Wrapper>
+        </Container>
+      </div>
     </footer>
   );
 };

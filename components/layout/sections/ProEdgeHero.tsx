@@ -65,7 +65,7 @@ export function ProEdgeHero() {
             </li>
             <li className="flex items-start sm:items-center">
               <CheckCircle className="text-green-500 mr-2 mt-1 sm:mt-0" />
-              <span>Price: ₹4999/-</span>
+              <span>Price: 6999/-</span>
             </li>
             <li className="flex items-start sm:items-center">
               <CheckCircle className="text-green-500 mr-2 mt-1 sm:mt-0" />

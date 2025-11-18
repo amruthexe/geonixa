@@ -76,8 +76,24 @@ export const Programs = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -18 }}
                   transition={{ duration: 0.45 }}
-                  className="group bg-white border border-orange-100 rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-300"
+                  className="group relative bg-white border border-orange-100 rounded-2xl p-5 shadow-md hover:shadow-xl transition-all duration-300"
                 >
+                  {/* Limited seats badge */}
+                  <div className="absolute top-6 right-6 z-20">
+                    <div
+                      className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full border border-orange-200"
+                      aria-hidden={false}
+                    >
+                      <span
+                        className="w-2.5 h-2.5 rounded-full bg-[#2ced16] blinking-dot shadow-[0_0_6px_rgba(235,73,23,0.85)]"
+                        aria-hidden="true"
+                      />
+                      <span className="text-xs font-semibold text-[#eb4917]">
+                        Limited seats
+                      </span>
+                    </div>
+                  </div>
+
                   <div className="overflow-hidden rounded-xl">
                     <Image
                       src={program.image}
@@ -151,8 +167,19 @@ export const Programs = () => {
           {programs.map((program) => (
             <div
               key={program.slug}
-              className="bg-white border border-orange-100 rounded-2xl p-4 shadow-md"
+              className="relative bg-white border border-orange-100 rounded-2xl p-4 shadow-md"
             >
+              {/* Mobile badge top-right */}
+              <div className="absolute top-3 right-3 z-20">
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-2 py-0.5 rounded-full border border-orange-200">
+                  <span
+                    className="w-2 h-2 rounded-full bg-[#eb4917] blinking-dot shadow-[0_0_6px_rgba(235,73,23,0.85)]"
+                    aria-hidden="true"
+                  />
+                  <span className="text-xs font-semibold text-[#eb4917]">Limited</span>
+                </div>
+              </div>
+
               <Image
                 src={program.image}
                 alt={program.title}
@@ -168,9 +195,7 @@ export const Programs = () => {
 
                 <h3 className="text-lg font-bold mt-1">{program.title}</h3>
 
-                <p className="text-sm text-gray-700 mt-1">
-                  {program.subtitle}
-                </p>
+                <p className="text-sm text-gray-700 mt-1">{program.subtitle}</p>
 
                 <div className="flex items-center justify-between text-sm text-gray-500 mt-4">
                   <span className="flex items-center gap-1">

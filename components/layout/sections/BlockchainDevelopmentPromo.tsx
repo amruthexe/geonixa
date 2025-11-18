@@ -58,7 +58,7 @@ export default function BlockchainDevelopmentPromo() {
               className="font-bold w-full sm:w-52 bg-black hover:bg-gray-800 text-white rounded-full px-6 py-3 transition"
             >
               <Link href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20your%20Blockchain%20Development%20course.">
-                Enroll for ₹4999
+                Enroll for ₹6999
                 <Play className="ml-2 w-4 h-4" />
               </Link>
             </Button>
