@@ -55,22 +55,31 @@ export default function Collaborations() {
           </div>
 
           {/* Logos Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-10 place-items-center">
-            {collaborations.map((partner) => (
-              <div
-                key={partner.name}
-                className="bg-white rounded-xl shadow-sm  flex items-center justify-center w-40 h-24 hover:shadow-md transition-all duration-200"
-              >
-                <Image
-                  src={partner.logo}
-                  alt={partner.name}
-                  width={120}
-                  height={80}
-                  className="object-contain max-h-16"
-                />
-              </div>
-            ))}
-          </div>
+          {/* Logos Grid */}
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-10 place-items-center">
+  {collaborations.map((partner) => (
+    <div
+      key={partner.name}
+      className="flex flex-col items-center"
+    >
+      <div className="bg-white rounded-xl shadow-sm flex items-center justify-center w-40 h-24 hover:shadow-md transition-all duration-200">
+        <Image
+          src={partner.logo}
+          alt={partner.name}
+          width={120}
+          height={80}
+          className="object-contain max-h-16"
+        />
+      </div>
+
+      {/* Partner Name */}
+      <p className="mt-3 text-sm font-semibold text-gray-700 text-center tracking-wide">
+        {partner.name}
+      </p>
+    </div>
+  ))}
+</div>
+
         </div>
       </div>
     </section>

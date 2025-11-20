@@ -35,7 +35,7 @@ const coreOutcomes = [
 ];
 
 const statData = [
-    { value: "6 Months", label: "To Job Readiness", icon: Clock },
+    { value: "5 Months", label: "To Job Readiness", icon: Clock },
     { value: "100%", label: "Placement Guarantee", icon: Award },
     { value: "₹6.5L+", label: "Avg. Starting Salary", icon: DollarSign },
 ];
@@ -64,7 +64,7 @@ export default function WebDevFormulaOverview(): JSX.Element {
 
             {/* Repositioned Tagline */}
             <p className="mt-6 text-2xl font-semibold text-center text-gray-700 flex items-center justify-center">
-              <span className="text-orange-700 font-extrabold mr-2">Goal:</span> From College Student <ArrowRight className="w-6 h-6 mx-2 text-orange-500" /> **Job-Ready Developer in 6 Months**
+              <span className="text-orange-700 font-extrabold mr-2">Goal:</span> From College Student <ArrowRight className="w-6 h-6 mx-2 text-orange-500" /> Job-Ready Developer in 6 Months
             </p>
 
             {/* Core Outcomes Banner (New Structure: Left to Right) */}

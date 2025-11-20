@@ -231,7 +231,7 @@ export const Programs = () => {
               <div className="absolute top-3 right-3 z-20">
                 <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-2 py-0.5 rounded-full border border-orange-200">
                   <span
-                    className="w-2 h-2 rounded-full bg-[#eb4917] blinking-dot shadow-[0_0_6px_rgba(235,73,23,0.85)]"
+                    className="w-2 h-2 rounded-full bg-[#08f42c] blinking-dot shadow-[0_0_6px_rgba(235,73,23,0.85)]"
                     aria-hidden="true"
                   />
                   <span className="text-xs font-semibold text-[#eb4917]">Limited</span>

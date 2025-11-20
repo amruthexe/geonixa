@@ -244,14 +244,8 @@ const Footer: React.FC = () => {
             <p className="text-sm text-gray-600">&copy; {year} GeoNixa. All rights reserved.</p>
 
             <div className="text-sm text-gray-600">
-              Built with ❤️ —{" "}
-              <Link href="/terms" className="hover:text-[#eb4917]">
-                Terms
-              </Link>{" "}
-              ·{" "}
-              <Link href="/privacy-policy" className="hover:text-[#eb4917]">
-                Privacy
-              </Link>
+              Built with ❤️ by  <span className="font-bold"> GeoNixa Dev Team</span> 
+              
             </div>
           </Wrapper>
         </Container>
