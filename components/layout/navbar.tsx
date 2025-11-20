@@ -78,7 +78,7 @@ const routeList: RouteProps[] = [
   { href: "/carrers", label: "Careers" },
   { href: "/about-us", label: "About us" },
   { href: "/support", label: "Support" },
-  {href:"/ambassador/apply", label: "Ambassador Program"}
+ 
 ];
 
 const serviceList: ServiceProps[] = [
@@ -99,7 +99,7 @@ const serviceList: ServiceProps[] = [
 ];
 
 const programList: ServiceProps[] = [
-
+ {href:"/ambassador/apply", title: "Ambassador Program" , icon: GraduationCap },
     { title: "2 Months Course", href: "/programs/pro-edge", icon: GraduationCap },
   { title: "Full-Stack Web Development (MERN)", href: "/programs/skill-boost", icon: BriefcaseBusiness },
   { title: "Digital Marketing & Growth Strategy", href: "/programs/campus-project-pro", icon: BriefcaseBusiness },
@@ -111,7 +111,7 @@ const programList: ServiceProps[] = [
   { title: "Dual Path 5", href: "/programs/campus-plus", icon: GraduationCap },
 
   { title: "Campus+ ProjectPro", href: "/programs/campus-project-pro", icon: GraduationCap },
-    { title: "All programs", href: "/programs", icon: GraduationCap },
+   
 ];
 
 // --- Shared ListItem Component (Unchanged) ---
