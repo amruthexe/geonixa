@@ -78,6 +78,7 @@ const routeList: RouteProps[] = [
   { href: "/carrers", label: "Careers" },
   { href: "/about-us", label: "About us" },
   { href: "/support", label: "Support" },
+  {href:"/ambassador/apply", label: "Ambassador Program"}
 ];
 
 const serviceList: ServiceProps[] = [
@@ -98,7 +99,7 @@ const serviceList: ServiceProps[] = [
 ];
 
 const programList: ServiceProps[] = [
-  { title: "All programs", href: "/programs", icon: GraduationCap },
+
     { title: "2 Months Course", href: "/programs/pro-edge", icon: GraduationCap },
   { title: "Full-Stack Web Development (MERN)", href: "/programs/skill-boost", icon: BriefcaseBusiness },
   { title: "Digital Marketing & Growth Strategy", href: "/programs/campus-project-pro", icon: BriefcaseBusiness },
@@ -110,6 +111,7 @@ const programList: ServiceProps[] = [
   { title: "Dual Path 5", href: "/programs/campus-plus", icon: GraduationCap },
 
   { title: "Campus+ ProjectPro", href: "/programs/campus-project-pro", icon: GraduationCap },
+    { title: "All programs", href: "/programs", icon: GraduationCap },
 ];
 
 // --- Shared ListItem Component (Unchanged) ---
@@ -165,7 +167,7 @@ export const Navbar = () => {
         />
         <div className="flex items-center space-x-2 ml-2">
           <span className="text-xl pb-1 font-extrabold tracking-wide text-[#eb4917]">
-            Geo <span className="text-gray-700">Nixa</span>
+            Geo<span className="text-gray-700">Nixa</span>
           </span>
         </div>
       </Link>
@@ -193,7 +195,7 @@ export const Navbar = () => {
             />
             <Link href="/" className="flex items-center">
               <span className="text-xl pb-1 font-extrabold tracking-wide text-[#eb4917]">
-                Geo <span className="text-gray-700">Nixa</span>
+                Geo<span className="text-gray-700">Nixa</span>
               </span>
             </Link>
           </SheetTitle>
