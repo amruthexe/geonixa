@@ -274,6 +274,15 @@ export const Navbar = () => {
                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>
             </Button>
+             <Button asChild className="flex-1 font-bold bg-[#eb4917] hover:bg-opacity-90 group/arrow">
+              <Link
+                href="https://lms.geonixa.xo"
+                target="_blank"
+              >
+                LMS 🎉
+                <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
             <Button asChild size="icon" variant="outline" className="text-green-500 border-green-500 hover:text-white hover:bg-green-500">
               <Link
                 href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
@@ -353,13 +362,15 @@ export const Navbar = () => {
       <div className="hidden lg:flex items-center">
         <Button asChild className="mr-4 font-bold group/arrow text-sm px-6 py-3 bg-[#eb4917] hover:bg-opacity-90 transition-all duration-300 shadow-lg">
           <Link
-            href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+            href="https://lms.geonixa.com"
             target="_blank"
           >
-            Book a Demo
+          new LMS 🎉
             <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
           </Link>
         </Button>
+
+        
         <Button asChild size="icon" variant="outline" className="text-green-500 border-green-500 hover:text-white hover:bg-green-500">
           <Link
             href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."

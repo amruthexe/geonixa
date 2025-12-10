@@ -69,7 +69,7 @@ const courses = [
     subtitle: "Course on Cloud Computing",
     duration: "2–3 Months",
     image: "/new/11.png",
-    slug: "cloud",
+    slug: "cloud-comp",
   },
   {
     title: "DevOps",
