@@ -69,6 +69,8 @@ export const metadata = {
 };
 
 
+import ProjectPromoHome from "@/components/layout/sections/ProjectPromoHome";
+
 export default function Home() {
   return (
     <>
@@ -112,6 +114,7 @@ export default function Home() {
     <Journey />
       
    <UpskillSectionDev/>
+    <ProjectPromoHome />
      <TestimonialSection/>
       <ContactSection />
       {/* <FAQSection /> */}
