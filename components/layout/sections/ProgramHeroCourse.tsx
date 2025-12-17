@@ -48,7 +48,7 @@ export default function ProgramHeroCourse(): JSX.Element {
           {/* CTAs */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
-              href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20the%202-month%20program"
+              href="https://wa.me/919390514374?text=Hi%2C%20I'm%20interested%20in%20the%202-month%20program"
               target="_blank"
               className="inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-orange-700 text-white font-semibold shadow-lg hover:bg-orange-600 transition"
             >

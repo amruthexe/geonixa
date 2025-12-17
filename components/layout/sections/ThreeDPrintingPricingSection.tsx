@@ -119,7 +119,7 @@ export const ThreeDPrintingPricingSection = () => {
                   className="w-full"
                 >
                   <Link
-                    href="https://wa.me/+919663216581?text=I%20am%20interested%20in%20your%203D%20Printing%20course%20plans."
+                    href="https://wa.me/+919390514374?text=I%20am%20interested%20in%20your%203D%20Printing%20course%20plans."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full h-full"

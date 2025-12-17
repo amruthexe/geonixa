@@ -101,10 +101,10 @@ const Footer: React.FC = () => {
         <Wrapper className="py-12 flex flex-col gap-12">
           
           {/* Top Section: Brand & Newsletter */}
-          <div className="flex flex-col md:flex-row justify-between items-start gap-8 border-b border-gray-100 pb-12">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-8 border-b border-gray-100 pb-12">
             
             {/* Brand */}
-            <div className="flex flex-col gap-4 max-w-sm">
+            <div className="flex flex-col gap-4 max-w-sm w-full lg:w-auto">
                 <div className="flex items-center gap-2">
                   <span className="text-3xl font-black tracking-tight text-[#eb4917]">GeoNixa</span>
                 </div>
@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
                   {[
                     { Icon: FaLinkedin, href: "https://www.linkedin.com/company/geonixa/" },
                     { Icon: FaInstagram, href: "https://www.instagram.com" },
-                    { Icon: FaWhatsapp, href: "https://wa.me/919663216581" },
+                    { Icon: FaWhatsapp, href: "https://wa.me/919390514374" },
                     { Icon: FaFacebookF, href: "https://www.facebook.com" },
                     { Icon: FaGithub, href: "https://github.com" },
                   ].map(({ Icon, href }, idx) => (
@@ -136,21 +136,21 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Newsletter */}
-            <div className="w-full md:w-auto md:min-w-[360px] bg-orange-50/50 p-6 rounded-2xl border border-orange-100">
+            <div className="w-full lg:w-auto lg:min-w-[400px] bg-orange-50/50 p-6 rounded-2xl border border-orange-100 mt-4 lg:mt-0">
                 <h4 className="font-semibold text-gray-900 mb-2">Stay Updated</h4>
                 <p className="text-sm text-gray-500 mb-4">Get the latest course updates and career tips.</p>
-                <form onSubmit={handleSubscribe} className="flex gap-2">
+                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
-                      className="flex-1 px-4 py-2 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#eb4917]/20 text-sm"
+                      className="flex-1 px-4 py-2.5 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#eb4917]/20 text-sm"
                     />
                     <Button 
                         type="submit" 
                         disabled={loading}
-                        className="bg-[#eb4917] hover:bg-[#d73f10] text-white whitespace-nowrap"
+                        className="bg-[#eb4917] hover:bg-[#d73f10] text-white whitespace-nowrap py-2.5 px-6"
                     >
                         {loading ? "..." : "Subscribe"}
                     </Button>
@@ -159,43 +159,48 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
             
             {/* Courses Column (Takes up more space) */}
-            <div className="md:col-span-8">
-                <h3 className="font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <div className="lg:col-span-8">
+                <h3 className="font-bold text-gray-900 mb-6 flex items-center gap-2 text-lg">
                     <BookOpenText className="w-5 h-5 text-[#eb4917]" />
                     Explore Courses
                 </h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6">
+                {/* Responsive Grid for Courses */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
                     {courseList.map((course, idx) => (
                         <Link 
                             key={idx} 
                             href={course.href}
-                            className="group flex items-center gap-2 text-sm text-gray-600 hover:text-[#eb4917] transition-colors"
+                            className="group flex items-center gap-3 text-[15px] text-gray-600 hover:text-[#eb4917] transition-colors py-1"
                         >
-                            <course.icon className="w-4 h-4 text-gray-400 group-hover:text-[#eb4917] transition-colors" />
-                            <span className="truncate">{course.title}</span>
+                            <div className="p-1.5 rounded-md bg-gray-50 group-hover:bg-orange-50 transition-colors">
+                                <course.icon className="w-4 h-4 text-gray-400 group-hover:text-[#eb4917] transition-colors" />
+                            </div>
+                            <span className="truncate font-medium">{course.title}</span>
                         </Link>
                     ))}
                 </div>
             </div>
 
             {/* Programs Column */}
-            <div className="md:col-span-4">
-                <h3 className="font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <div className="lg:col-span-4 border-t lg:border-t-0 border-gray-100 pt-8 lg:pt-0">
+                <h3 className="font-bold text-gray-900 mb-6 flex items-center gap-2 text-lg">
                     <GraduationCap className="w-5 h-5 text-[#eb4917]" />
                     Our Programs
                 </h3>
-                 <div className="flex flex-col gap-4">
+                 <div className="flex flex-col gap-3">
                     {programList.map((program, idx) => (
                         <Link 
                             key={idx} 
                             href={program.href}
-                            className="group flex items-start gap-3 text-sm text-gray-600 hover:text-[#eb4917] transition-colors p-2 -ml-2 rounded-lg hover:bg-orange-50/50"
+                            className="group flex items-start gap-4 text-[15px] text-gray-600 hover:text-[#eb4917] transition-colors p-3 rounded-xl hover:bg-orange-50/50 border border-transparent hover:border-orange-100/50"
                         >
-                            <program.icon className="w-4 h-4 text-gray-400 group-hover:text-[#eb4917] mt-0.5 shrink-0" />
-                            <span className="leading-tight">{program.title}</span>
+                            <div className="mt-0.5 p-1.5 rounded-md bg-gray-50 group-hover:bg-white transition-colors shadow-sm">
+                                <program.icon className="w-4 h-4 text-gray-400 group-hover:text-[#eb4917]" />
+                            </div>
+                            <span className="leading-snug font-medium">{program.title}</span>
                         </Link>
                     ))}
                 </div>
@@ -204,11 +209,12 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-100 text-sm text-gray-500">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-gray-100 text-sm text-gray-500 text-center md:text-left">
             <p>&copy; {year} GeoNixa. All rights reserved.</p>
-            <div className="flex items-center gap-6">
-                <Link href="#" className="hover:text-[#eb4917]">Privacy Policy</Link>
-                <Link href="#" className="hover:text-[#eb4917]">Terms of Service</Link>
+            <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+                <Link href="#" className="hover:text-[#eb4917] transition-colors">Privacy Policy</Link>
+                <Link href="#" className="hover:text-[#eb4917] transition-colors">Terms of Service</Link>
+                <Link href="#" className="hover:text-[#eb4917] transition-colors">Cookie Policy</Link>
             </div>
           </div>
           

@@ -106,7 +106,7 @@ const AboutUs = () => {
                   <FaLinkedin className="text-blue-700 hover:text-blue-900" />
                 </a>
                 
-                <a href="https://wa.me/919663216581" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919390514374" target="_blank" rel="noopener noreferrer">
                   <FaWhatsapp className="text-green-600 hover:text-green-800" />
                 </a>
                

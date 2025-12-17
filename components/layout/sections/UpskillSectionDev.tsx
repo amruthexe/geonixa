@@ -66,7 +66,7 @@ export default function UpskillSectionDev() {
                   aria-label="Book a demo on WhatsApp"
                 >
                   <Link
-                    href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
+                    href="https://wa.me/919390514374?text=Hi%2C%20I'm%20interested%20in%20booking%20a%20demo%20with%20your%20team."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -87,7 +87,7 @@ export default function UpskillSectionDev() {
                   className="w-full sm:w-auto inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-white border border-gray-200 text-gray-800 font-semibold shadow-sm hover:bg-orange-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-100"
                   aria-label="Call us"
                 >
-                  <Link href="tel:+919663216581">Call Us</Link>
+                  <Link href="tel:+919390514374">Call Us</Link>
                 </Button>
               </motion.div>
 
@@ -183,7 +183,7 @@ export default function UpskillSectionDev() {
                   </a>
 
                   <a
-                    href="https://wa.me/919663216581?text=Hi%2C%20I%27m%20interested%20in%20enrolling."
+                    href="https://wa.me/919390514374?text=Hi%2C%20I%27m%20interested%20in%20enrolling."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-gradient-to-r from-amber-400 to-orange-600 text-white font-semibold shadow hover:scale-[1.01] transition"

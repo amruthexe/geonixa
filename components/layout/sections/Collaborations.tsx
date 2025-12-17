@@ -45,7 +45,7 @@ export default function Collaborations() {
             </p>
             <div className="mt-8">
               <a
-                href="https://wa.me/919392855968"
+                href="https://wa.me/919390514374"
                 target="_blank"
                 className="inline-block bg-black text-white text-lg font-semibold px-8 py-3 rounded-full shadow hover:bg-gray-800 transition-all duration-200"
               >

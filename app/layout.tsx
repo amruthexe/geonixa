@@ -52,7 +52,7 @@ export default function RootLayout({
 
         {/* Floating Buttons */}
         <div className="fixed bottom-8 right-8 md:bottom-4 md:right-4 flex flex-col gap-3 items-center z-50">
-          <Link href="tel:+919663216581">
+          <Link href="tel:+919390514374">
             <div className="bg-[#eb4917] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
               <FaPhoneAlt size={20} />
             </div>

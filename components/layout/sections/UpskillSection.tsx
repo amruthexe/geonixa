@@ -116,7 +116,7 @@ export default function UpskillHero() {
               asChild
               className="w-5/6 sm:w-auto px-10 py-7 text-lg font-bold bg-[#eb4917] hover:bg-[#d43f10] shadow-lg hover:shadow-xl rounded-xl transition"
             >
-              <Link href="https://wa.me/919663216581?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20demo.">
+              <Link href="https://wa.me/919390514374?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20demo.">
                 Book a Demo{" "}
                 <ArrowRight className="ml-2 inline-block size-5 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -127,7 +127,7 @@ export default function UpskillHero() {
               variant="secondary"
               className="w-5/6 sm:w-auto px-10 py-7 text-lg font-bold text-gray-700 bg-gray-100 hover:bg-gray-200 border border-gray-300 shadow-md rounded-xl"
             >
-              <Link href="tel:+919663216581">Call Us</Link>
+              <Link href="tel:+919390514374">Call Us</Link>
             </Button>
           </motion.div>
         </div>

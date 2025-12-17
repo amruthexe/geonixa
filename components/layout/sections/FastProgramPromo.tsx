@@ -60,7 +60,7 @@ export default function ProgramPromo() {
               asChild
               className="w-5/6 sm:w-1/3 font-bold group/arrow bg-black hover:bg-gray-800 text-white rounded-full px-24 py-3 transition duration-300"
             >
-              <Link href="https://wa.me/919663216581?text=Hi%2C%20I'm%20interested%20in%20learning%20about%20your%20Fast%20Track%2045%20course.">
+              <Link href="https://wa.me/919390514374?text=Hi%2C%20I'm%20interested%20in%20learning%20about%20your%20Fast%20Track%2045%20course.">
                 Start Learning at ₹6999
               </Link>
             </Button>
@@ -70,7 +70,7 @@ export default function ProgramPromo() {
               variant="outline"
               className="w-5/6 sm:w-1/3 font-bold border-2 border-black text-black hover:bg-gray-50 rounded-full px-8 py-3 transition duration-300"
             >
-              <Link href="tel:+919663216581">Call Us</Link>
+              <Link href="tel:+919390514374">Call Us</Link>
             </Button>
           </div>
         </div>
