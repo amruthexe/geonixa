@@ -108,7 +108,7 @@ const programList: ServiceProps[] = [
   { title: "Skill Boost 2", href: "/programs/skill-boost", icon: GraduationCap },
 
   { title: "Dual Path 5", href: "/programs/dual-pack", icon: GraduationCap },
-  { title: "Dual Path 5", href: "/programs/campus-plus", icon: GraduationCap },
+  { title: "Campus+ LearnTrack ", href: "/programs/campus-plus", icon: GraduationCap },
 
   { title: "Campus+ ProjectPro", href: "/project", icon: GraduationCap },
    
