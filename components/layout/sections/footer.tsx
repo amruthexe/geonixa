@@ -12,38 +12,57 @@ import {
   FaFacebookF,
   FaGithub,
 } from "react-icons/fa";
+import {
+  BookOpenText,
+  Layers,
+  Code,
+  Smartphone,
+  FileCode,
+  FileCode2,
+  Monitor,
+  Brain,
+  BarChart3,
+  Cloud,
+  Server,
+  ShieldCheck,
+  Link2,
+  Cpu,
+  GraduationCap,
+  BriefcaseBusiness,
+  Bot,
+  Box,
+  Palette,
+} from "lucide-react";
 
-const routeList = [
-  { href: "/team", label: "Team" },
-  { href: "/careers", label: "Careers" },
-  { href: "/about-us", label: "About us" },
-];
-const routeLists = [
-  { href: "/support", label: "Support" },
-  { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/refund-policy", label: "Refund Policy" },
+// Courses List
+const courseList = [
+  { title: "All Courses", href: "/all-courses", icon: BookOpenText },
+  { title: "Full Stack Web Dev", href: "/full-stack", icon: Layers },
+  { title: "Web Development", href: "/web", icon: Code },
+  { title: "App Development", href: "/app-dev", icon: Smartphone },
+  { title: "Python Progamming", href: "/python", icon: FileCode },
+  { title: "Java Progamming", href: "/java", icon: FileCode2 },
+  { title: "UI/UX", href: "/ui-ux", icon: Monitor },
+  { title: "Canva & Graphic Design", href: "/graphic-design", icon: Palette },
+  { title: "Data Science", href: "/data-science", icon: Brain },
+  { title: "Data Analytics", href: "/data-analytics", icon: BarChart3 },
+  { title: "Cloud Computing", href: "/cloud-comp", icon: Cloud },
+  { title: "DevOps", href: "/devops", icon: Server },
+  { title: "Cyber Security", href: "/cyber-security", icon: ShieldCheck },
+  { title: "Block Chain", href: "/block-chain", icon: Link2 },
+  { title: "Artificial Intelligence", href: "/ai", icon: Cpu },
+  { title: "Machine Learning", href: "/ml", icon: Bot },
+  { title: "3D Learning Course", href: "/3d", icon: Box },
 ];
 
-const serviceList = [
-  { title: "Web Development", href: "/web" },
-  { title: "App Development", href: "/app-dev" },
-  { title: "Cloud Computing", href: "/cloud-comp" },
-  { title: "Cyber Security", href: "/cyber-security" },
-  { title: "Data Science", href: "/data-science" },
-  { title: "Full Stack Web Dev", href: "/full-stack" },
-  { title: "Python Programming", href: "/python" },
-];
-
+// Programs List
 const programList = [
-  { title: "All programs", href: "/programs" },
-  { title: "Fast Track 45", href: "/programs/fast-track" },
-  { title: "Skill Boost 2", href: "/programs/skill-boost" },
-  { title: "Pro Edge 3", href: "/programs/pro-edge" },
-  { title: "Dual Path 5", href: "/programs/dual-pack" },
-  { title: "Career Pro 6", href: "/programs/career-pro" },
-  { title: "Campus+ LearnTrack", href: "/programs/campus-plus" },
-  { title: "Campus+ ProjectPro", href: "/programs/campus-project-pro" },
-  { title: "Campus+ CodeStart", href: "/programs/campus-code-start" },
+    { title: "Ambassador Program", href: "/ambassador/apply", icon: GraduationCap },
+    { title: "2 Months Course", href: "/programs/pro-edge", icon: GraduationCap },
+    { title: "Full-Stack Web Development (MERN)", href: "/programs/skill-boost", icon: BriefcaseBusiness },
+    { title: "Digital Marketing & Growth Strategy", href: "/programs/campus-project-pro", icon: BriefcaseBusiness },
+    { title: "Cross-Platform App Developer Program", href: "/programs/campus-code-start", icon: BriefcaseBusiness },
+    { title: "15 Days Course", href: "/programs/career-pro", icon: GraduationCap },
 ];
 
 const Footer: React.FC = () => {
@@ -77,179 +96,124 @@ const Footer: React.FC = () => {
   };
 
   return (
-    // local overflow-x-hidden to prevent footer-caused horizontal scroll
     <footer className="w-full bg-white border-t overflow-x-hidden">
-      {/* Top area */}
       <Container>
-        {/* Wrapper keeps layout consistent; ensure it doesn't add horizontal overflow */}
-        <Wrapper className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {/* Brand / CTA */}
-          <div className="flex flex-col gap-4 min-w-0">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-extrabold text-[#eb4917]">GeoNixa</span>
-            </div>
-
-            <p className="text-sm text-[#eb4917]/90 max-w-[340px]">
-              We’re an edtech startup helping students learn practical skills, build projects and launch
-              careers — affordably and effectively.
-            </p>
-
-            <div className="mt-2">
-              <Link href="/app" className="inline-block">
-                <Button className="bg-[#eb4917] hover:bg-[#d73f10] text-white rounded-full px-4 py-2">
-                  Start for free
-                </Button>
-              </Link>
-            </div>
-
-            {/* Socials */}
-            <div className="mt-4 flex items-center gap-3">
-              <Link
-                href="https://www.linkedin.com/company/geonixa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GeoNixa on LinkedIn"
-                className="inline-flex"
-              >
-                <FaLinkedin className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
-              </Link>
-              <Link
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GeoNixa on Instagram"
-                className="inline-flex"
-              >
-                <FaInstagram className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
-              </Link>
-              <Link
-                href="https://wa.me/919663216581"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GeoNixa on WhatsApp"
-                className="inline-flex"
-              >
-                <FaWhatsapp className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
-              </Link>
-              <Link
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GeoNixa on Facebook"
-                className="inline-flex"
-              >
-                <FaFacebookF className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
-              </Link>
-              <Link
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GeoNixa on Github"
-                className="inline-flex"
-              >
-                <FaGithub className="w-5 h-5 text-gray-600 hover:text-[#eb4917] transition" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Links */}
-          <div className="grid grid-cols-2 gap-6 md:col-span-1 lg:col-span-1 min-w-0">
-            <div>
-              <h4 className="text-sm font-semibold mb-3">Company</h4>
-              <ul className="space-y-3 text-sm text-[#eb4917]/90">
-                {routeList.map((r) => (
-                  <li key={r.href} className="truncate">
-                    <Link href={r.href} className="hover:text-[#eb4917] transition">
-                      {r.label}
+        <Wrapper className="py-12 flex flex-col gap-12">
+          
+          {/* Top Section: Brand & Newsletter */}
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8 border-b border-gray-100 pb-12">
+            
+            {/* Brand */}
+            <div className="flex flex-col gap-4 max-w-sm">
+                <div className="flex items-center gap-2">
+                  <span className="text-3xl font-black tracking-tight text-[#eb4917]">GeoNixa</span>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  We’re an edtech startup helping students learn practical skills, build projects and launch
+                  careers — affordably and effectively.
+                </p>
+                
+                {/* Socials */}
+                <div className="flex items-center gap-4 mt-2">
+                  {[
+                    { Icon: FaLinkedin, href: "https://www.linkedin.com/company/geonixa/" },
+                    { Icon: FaInstagram, href: "https://www.instagram.com" },
+                    { Icon: FaWhatsapp, href: "https://wa.me/919663216581" },
+                    { Icon: FaFacebookF, href: "https://www.facebook.com" },
+                    { Icon: FaGithub, href: "https://github.com" },
+                  ].map(({ Icon, href }, idx) => (
+                    <Link
+                      key={idx}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-[#eb4917] transition-transform hover:scale-110"
+                    >
+                      <Icon className="w-5 h-5" />
                     </Link>
-                  </li>
-                ))}
-              </ul>
+                  ))}
+                </div>
             </div>
 
-            <div>
-              <h4 className="text-sm font-semibold mb-3">Support</h4>
-              <ul className="space-y-3 text-sm text-[#eb4917]/90">
-                {routeLists.map((r) => (
-                  <li key={r.href} className="truncate">
-                    <Link href={r.href} className="hover:text-[#eb4917] transition">
-                      {r.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Programs / newsletter */}
-          <div className="flex flex-col gap-4 min-w-0">
-            <h4 className="text-sm font-semibold">Programs</h4>
-
-            {/* Program list: use a wrapping flex with overflow-auto so long lists don't force width */}
-            <div
-              className="flex flex-wrap gap-2 text-sm text-[#eb4917]/90 max-h-40 overflow-auto pr-2"
-              style={{ WebkitOverflowScrolling: "touch" }}
-            >
-              {programList.map((p) => (
-                <Link
-                  key={p.href}
-                  href={p.href}
-                  className="hover:text-[#eb4917] transition text-left whitespace-nowrap"
-                >
-                  {p.title}
-                </Link>
-              ))}
-            </div>
-
-            {/* Subscribe */}
-            <div className="mt-4">
-              <label htmlFor="footer-email" className="text-sm font-medium block mb-2">
-                Subscribe to updates
-              </label>
-
-              {/* Responsive subscribe form: stack on xs, inline from sm */}
-              <form
-                onSubmit={handleSubscribe}
-                className="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center w-full"
-              >
-                <input
-                  id="footer-email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email"
-                  className="w-full sm:flex-1 px-3 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#ffd7c0]"
-                  aria-label="Email address"
-                />
-
-                <Button
-                  type="submit"
-                  className="w-full sm:w-auto bg-[#eb4917] hover:bg-[#d73f10] text-white px-4 py-2"
-                  disabled={loading}
-                >
-                  {loading ? "Joining..." : subscribed ? "Joined" : "Join"}
-                </Button>
-              </form>
-
-              <p className="text-xs text-gray-500 mt-2">Get program updates, discounts and career tips.</p>
+            {/* Newsletter */}
+            <div className="w-full md:w-auto md:min-w-[360px] bg-orange-50/50 p-6 rounded-2xl border border-orange-100">
+                <h4 className="font-semibold text-gray-900 mb-2">Stay Updated</h4>
+                <p className="text-sm text-gray-500 mb-4">Get the latest course updates and career tips.</p>
+                <form onSubmit={handleSubscribe} className="flex gap-2">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      className="flex-1 px-4 py-2 rounded-lg bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#eb4917]/20 text-sm"
+                    />
+                    <Button 
+                        type="submit" 
+                        disabled={loading}
+                        className="bg-[#eb4917] hover:bg-[#d73f10] text-white whitespace-nowrap"
+                    >
+                        {loading ? "..." : "Subscribe"}
+                    </Button>
+                </form>
             </div>
           </div>
+
+          {/* Links Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+            
+            {/* Courses Column (Takes up more space) */}
+            <div className="md:col-span-8">
+                <h3 className="font-bold text-gray-900 mb-6 flex items-center gap-2">
+                    <BookOpenText className="w-5 h-5 text-[#eb4917]" />
+                    Explore Courses
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 gap-x-6">
+                    {courseList.map((course, idx) => (
+                        <Link 
+                            key={idx} 
+                            href={course.href}
+                            className="group flex items-center gap-2 text-sm text-gray-600 hover:text-[#eb4917] transition-colors"
+                        >
+                            <course.icon className="w-4 h-4 text-gray-400 group-hover:text-[#eb4917] transition-colors" />
+                            <span className="truncate">{course.title}</span>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
+            {/* Programs Column */}
+            <div className="md:col-span-4">
+                <h3 className="font-bold text-gray-900 mb-6 flex items-center gap-2">
+                    <GraduationCap className="w-5 h-5 text-[#eb4917]" />
+                    Our Programs
+                </h3>
+                 <div className="flex flex-col gap-4">
+                    {programList.map((program, idx) => (
+                        <Link 
+                            key={idx} 
+                            href={program.href}
+                            className="group flex items-start gap-3 text-sm text-gray-600 hover:text-[#eb4917] transition-colors p-2 -ml-2 rounded-lg hover:bg-orange-50/50"
+                        >
+                            <program.icon className="w-4 h-4 text-gray-400 group-hover:text-[#eb4917] mt-0.5 shrink-0" />
+                            <span className="leading-tight">{program.title}</span>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-100 text-sm text-gray-500">
+            <p>&copy; {year} GeoNixa. All rights reserved.</p>
+            <div className="flex items-center gap-6">
+                <Link href="#" className="hover:text-[#eb4917]">Privacy Policy</Link>
+                <Link href="#" className="hover:text-[#eb4917]">Terms of Service</Link>
+            </div>
+          </div>
+          
         </Wrapper>
       </Container>
-
-      {/* Bottom area */}
-      <div className="border-t mt-6">
-        <Container>
-          <Wrapper className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-600">&copy; {year} GeoNixa. All rights reserved.</p>
-
-            <div className="text-sm text-gray-600">
-              Built with ❤️ by  <span className="font-bold"> GeoNixa Dev Team</span> 
-              
-            </div>
-          </Wrapper>
-        </Container>
-      </div>
     </footer>
   );
 };

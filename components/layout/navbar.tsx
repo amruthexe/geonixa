@@ -276,7 +276,7 @@ export const Navbar = () => {
             </Button>
              <Button asChild className="flex-1 font-bold bg-[#eb4917] hover:bg-opacity-90 group/arrow">
               <Link
-                href="https://lms.geonixa.xo"
+                href="https://lms.geonixa.com"
                 target="_blank"
               >
                 LMS 🎉

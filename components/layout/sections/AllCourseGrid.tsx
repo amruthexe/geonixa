@@ -90,7 +90,7 @@ const courses = [
     subtitle: "Course on Data Analytics",
     duration: "2–3 Months",
     image: "/new/14.png",
-    slug: "business-analytics",
+    slug: "data-analytics",
   },
   {
     title: "UI/UX",
@@ -106,13 +106,7 @@ const courses = [
     image: "/new/16.png",
     slug: "sql",
   },
-  {
-    title: "Graphic Design",
-    subtitle: "Course on Graphic Design",
-    duration: "2–3 Months",
-    image: "/new/17.png",
-    slug: "graphic-design",
-  },
+
   {
     title: "Embedded Systems",
     subtitle: "Course on Embedded Systems",
@@ -209,7 +203,7 @@ const courses = [
     subtitle: "Course on Business Analytics",
     duration: "2–3 Months",
     image: "/new/20.png",
-    slug: "business-analytics-2",
+    slug: "business-analytics",
   },
   {
     title: "Data Visualization using Power BI / Tableau",
@@ -244,7 +238,7 @@ const courses = [
     subtitle: "Course on Canva & Graphic Design for Marketing",
     duration: "2–3 Months",
     image: "/new/26.png",
-    slug: "graphic-design-marketing",
+    slug: "graphic-design",
   },
   {
     title: "Stock Market",
