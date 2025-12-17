@@ -63,7 +63,7 @@ const programs = [
     subtitle: "Android + iOS + Play Store Publishing",
     duration: "5-6 Months",
     image: "/new/1.png", 
-    slug: "campus-code-start",
+    slug: "programs/campus-code-start",
   },
   {
     title: "Digital Marketing & Growth Strategy",
