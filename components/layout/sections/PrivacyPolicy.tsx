@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
 
         {/* Intro */}
         <p className="text-gray-800 leading-relaxed mb-8">
-          At <span className="font-semibold">Geonixa </span> 
+          At <span className="font-semibold">Geonixa (Geonixa Learning Private Limited) </span> 
            ("we", "our", "us"), we are fully committed to safeguarding your privacy and 
           ensuring that your experience on our website and with our services remains secure 
           and trustworthy. This Privacy Policy explains how we collect, use, and protect 
