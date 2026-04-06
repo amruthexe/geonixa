@@ -212,7 +212,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-gray-100 text-sm text-gray-500 text-center md:text-left">
             <p>&copy; {year} GeoNixa. All rights reserved.</p>
             <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8">
-                <Link href="#" className="hover:text-[#eb4917] transition-colors">Privacy Policy</Link>
+                <Link href="/privacy" className="hover:text-[#eb4917] transition-colors">Privacy Policy</Link>
                 <Link href="#" className="hover:text-[#eb4917] transition-colors">Terms of Service</Link>
                 <Link href="#" className="hover:text-[#eb4917] transition-colors">Cookie Policy</Link>
             </div>

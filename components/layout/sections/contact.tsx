@@ -118,7 +118,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-sm font-semibold">Find us</div>
-                  <div className="text-sm text-gray-600">247, Trendz Aspire, Kavuri Hills, Hyderabad, Telangana 500033</div>
+                  <div className="text-sm text-gray-600"> Hyderabad, Telangana 500033</div>
                 </div>
               </div>
 
