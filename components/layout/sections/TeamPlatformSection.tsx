@@ -100,6 +100,8 @@ export default function StudentPlatformSection() { // Renamed component for rele
                 src={card.img}
                 alt={card.title}
                 fill
+                unoptimized
+
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
                 priority={i < 2}

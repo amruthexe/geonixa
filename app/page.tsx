@@ -97,7 +97,7 @@ export default function Home() {
              <SuccessStories/>
                <LmsAnnouncement/>
              {/* <WhyJoinGeoNixa/> */}
-             <TeamPlatformSection/>
+             {/* <TeamPlatformSection/> */}
 
             
 <FifteenDaysPromo/>

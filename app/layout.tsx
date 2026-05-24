@@ -9,6 +9,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { DelayedPopup } from "@/components/layout/sections/DelayedPopup";
+import GeonixaChatbot from "@/components/layout/sections/GeonixaChatbot";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -51,13 +52,19 @@ export default function RootLayout({
         {children}
 
         {/* Floating Buttons */}
-        <div className="fixed bottom-8 right-8 md:bottom-4 md:right-4 flex flex-col gap-3 items-center z-50">
-          <Link href="tel:+919390514374">
-            <div className="bg-[#eb4917] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
-              <FaPhoneAlt size={20} />
-            </div>
-          </Link>
-        </div>
+       <div className="fixed bottom-6 right-6 flex flex-col items-center gap-3 z-50">
+
+  {/* 📞 Call Button */}
+  <Link href="tel:+919390514374">
+    <div className="bg-[#eb4917] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
+      <FaPhoneAlt size={18} />
+    </div>
+  </Link>
+
+  {/* 🤖 Chatbot */}
+  <GeonixaChatbot />
+
+</div>
       </body>
     </html>
   );
